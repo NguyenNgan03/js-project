@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt vé bảo tàng</title>
+    <link rel="stylesheet" href="../css/book_ticket.css">
+</head>
+<body>
+      <div class="backgroud-booking">
+        <h2 style="text-align: center;">Đặt vé</h2>
+
+    <div class="museum-card">
+      <div class="imgbaotang">
+        <img src="../image/Group 1.png" alt="Ảnh bảo tàng">
+      </div>
+      <div class="thongtinbaotang">
+        <h3>Tên bảo tàng</h3>
+        <p>Địa chỉ bảo tàng</p>
+        <p>Giá vé: $10</p>
+        <p>Đánh giá: ★★★★☆</p>
+      </div>
+    </div>
+
+    <div class="booking-form">
+
+        <form action="#" method="post">
+            <label for="date">Ngày đi đến bảo tàng:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="birthdate">Ngày tháng năm sinh:</label>
+            <input type="date" id="birthdate" name="birthdate">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="ticket">Số vé:</label>
+            <input type="number" id="ticket" name="ticket">
+
+            <label for="payment">Hình thức thanh toán:</label>
+            <select id="payment" name="payment">
+                <option value="card">Thẻ ngân hàng</option>
+                <option value="cash">Tiền mặt</option>
+            </select>
+
+            <button style="background-color:yellow; color: black" type="submit">Xác nhận</button>
+            <button style="background-color:yellow; color: black" type="reset">Hủy</button> 
+        </form>
+    </div>
+
+      </div>
+    </div>
+</body>
+</html>
