@@ -24,9 +24,9 @@ body {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f9f5f5;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #f6dd55;
 }
 
 .booking-form label {
@@ -38,11 +38,12 @@ body {
 .booking-form input[type="date"],
 .booking-form input[type="email"],
 .booking-form input[type="tel"],
+.booking-form input[type="number"],
 .booking-form select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border: 1px solid #f6dd55;
     border-radius: 3px;
 }
 
