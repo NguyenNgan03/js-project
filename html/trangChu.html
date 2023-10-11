@@ -3,68 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đặt vé bảo tàng</title>
-    <link rel="stylesheet" href="../css/trangChu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    
-</head>
-<body>  
-   
-<!-- --------Nav------------- -->
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <div class="container">
-            <img class="logo1 navbar-brand" src="../image/Group 67.png" alt="" >
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Book museum tickets</a>
-          </div>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Book</a></li>
-            <li><a href="#">Contact US </a></li>
-          </ul>
-          <button class="btn btn-danger navbar-btn">Login</button>
-          <button class="btn btn-danger navbar-btn">Register</button>
-          <form class="navbar-form navbar-left" action="/action_page.php">
-              <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search" name="search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </div>
-    </div>
-</nav>
+    <title>Home page</title>
+    <!-- Bootstrap 5 CSS -->
+    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/jquery.min.js"> </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-<!-- -------slider-------- -->
-        <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="../image/Rectangle 7133751.png" alt=""></div>
-              <div class="swiper-slide"><img src="../image/bg-bgr.png" alt=""></div>
-              <div class="swiper-slide"><img src="../image/Kien-Truc-Bao-Tang-L 1.png" alt=""></div>
-              <div class="swiper-slide"><img src="../image/79420-Museum-Of-Fine-Arts 1.png" alt=""></div>
+    <link rel="stylesheet" href="../css/trangChu.css">
+</head>
+<body>
+    <main>
+        <div id="wrapper">
+            <div id="header">
+                <div id="menu">
+                    <a href="" class="logo">
+                        <img src="../image/Logo.png" style="width:50px; height: 50px;" alt="">
+                    </a>
+                    <div class="item">
+                        <a href="">Home</a>
+                    </div>
+                    <div class="item">
+                        <a href="">About US</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Booking</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Contact US</a>
+                    </div>
+                    <div class="item">
+                        <button id="login-button" class="text" onclick="showLoginForm()">Login</button>
+                        <button class="text">Sign up</button>
+                    </div>
+                </div>
+        
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div id="banner">
+                <div class="box-left">
+                    <h2>
+                        <span>Khám phá Nghệ Thuật</span>
+                        <br>
+                        <span>Đặt vé đơn giản cùng chúng tôi</span>
+                    </h2>
+                    <br>
+                    <p>Chuyên cung cấp các dịch vụ cho người dùng, phục vụ người dùng 1 cái
+                        hoàn hảo nhất</p>
+                    <button>Booking</button>
+                </div>
+            </div>
         </div>
-    
-        <div class="detail">
-            <div class="slider-detail"></div>
+   
+        <div class="container-fluid">
+            <div id="best">
+                <h1 class="fw-bold">Best</h1>
+                <br>
+                <div class="row ">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img src="../image/1.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Museum of cham sculpture</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div class="text-end">
+                                    <a href="#" class="btn btn-primary">Booking </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img src="../image/2.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Museum of military zone 5 </h5>
+                                <span class="card-price">$12</span>
+                                <p class="card-text">Museum of Military Zone 5, Da Nang is a military museum located at No.</p>
+                                <div class="text-end">
+                                    <a href="#" class="btn btn-primary">Booking </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <div class="card ml-1">
+                            <img src="../image/3.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Da Nang fine arts museum </h5>
+                                <p class="card-text">Danang Fine Arts Museum is the first art museum in Danang. Currently, this Danang museum is storing more than 600 valuable artworks.</p>
+                                <div class="text-end">
+                                    <a href="#" class="btn btn-primary">Booking </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card ml-1">
+                            <img src="../image/5.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Da Nang Museum</h5>
+                                <p class="card-text">Danang Museum is located on the site of Dien Hai Ancient Palace, preserving typical memorabilia of the history, culture, and people in Danang.</p>
+                                <div class="text-end">
+                                    <a href="#" class="btn btn-primary">Booking </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>  
+            </div>
         </div>
-        <script src="../js/trangChu.js"></script>
+
+        <div class="container-fluids">
+            <div id="month">
+                <h5 class="fw-bold">Recomened Meseum</h5>
+                <h1 class="fw-bold">Meseum of the month</h1>
+                <br>
+                <div class="row ">
+                    <div class="col-sm-3">
+                        <div class="card ">
+                            <img src="../image/6.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Bảo tàng Hồ Chí Minh</h5>
+                                <i class="fa-solid fa-location-dot" style="color:#FFC300;"></i> 19 Ngọc Hà- Ba Đình
+                                <div class="text-end">
+                                <br>
+                                    <a href="#" class="btn btn-primary ">$125.000</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img src="../image/7.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Bảo tàng Lịch sử Quốc gia</h5>
+                                <i class="fa-solid fa-location-dot" style="color:#FFC300;"></i> 23 Tràng Tiền- Hoàn Kiếm 
+                                <div class="text-end">
+                                <br>
+                                    <a href="#" class="btn btn-primary">$110.000</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <div class="card ml-1">
+                            <img src="../image/8.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Bảo tàng Chăm</h5>
+                                <i class="fa-solid fa-location-dot" style="color:#FFC300;"></i> 2/9 Hải Châu- Đà Nẵng
+                                <div class="text-end">
+                                <br>
+                                    <a href="#" class="btn btn-primary ">$125.000</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card ml-1">
+                            <img src="../image/9.jpg" class="rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Bảo tàng Hồ Chí Minh</h5>
+                                <i class="fa-solid fa-location-dot" style="color:#FFC300;"></i> 19 Ngọc Hà, quận Ba Đình, Hà Nội
+                                <div class="text-end">
+                                <br>
+                                    <a href="#" class="btn btn-primary ">$100.000</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>  
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div id="destinations">
+                <h1 class="fw-bold">Destinations</h1>
+                <br>
+                <div class="row row-cols-sm-3">
+                    <div class="text-start">
+                        <img src="../image/10.jpg" class="img"  alt="...">
+
+                    </div>
+                    <div class="text-center">
+                        <img src="../image/13.jpg" class="img" alt="...">
+
+                    </div>
+                    <div class="text-end">
+                        <img src="../image/9.jpg" class="img" alt="...">
+                    </div>
+                </div>  
+                <br>
+                <div class="row row-cols-sm-3">
+                    <div class="text-start">
+                        <img src="../image/10.jpg" class="img"  alt="...">
+
+                    </div>
+                    <div class="text-center">
+                        <img src="../image/5.jpg" class="img" alt="...">
+
+                    </div>
+                    <div class="text-end">
+                        <img src="../image/12.jpg" class="img" alt="...">
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+<!-- ------------------Footer---------------------- -->
+        <footer class="footer">
+            <div class="footer_heading">
+                <div class="footer_heading_text">
+                    <h2 class="text"> Join our newsletter </h2>
+                    <p class="text"> We'll send you a nice letter once per week. No spam </p>
+                </div>
+                <div class="footer_heading_box">
+                    <input type="text" id="box" placeholder="Enter your name here">
+                </div>
+            </div>
+            <hr> 
+
+            <div class="footer_centre">
+                <div class="footer_centre_text">
+                    <div class="logo">
+                        <img src="../image/Group 67.png" />
+                        <p class="text" id="text_logo"> Book meseum tickets</p>
+                    </div>
+                    <p class="text"> A joint venture is an application to collect fees from a agreed plan </p>
+                </div>
+                <div class="footer_centre_colum">
+                    <div class="colum" >
+                        <h3 class="colum_name_text"id="text_colum"> Quick link </h3>
+                        <ul class="colum_list">
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link" id="text_colum"> About us</a>
+                            </li>
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link" id="text_colum"> Desk support</a>
+                            </li>
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link" id="text_colum"> Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="colum">
+                        <h3 class="colum_name_text" id="text_colum"> Company </h3>
+                        <ul class="colum_list">
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link" id="text_colum"> Location</a>
+                            </li>
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link" id="text_colum"> Our Mission </a>
+                            </li>
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link"id="text_colum"> Career</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="colum">
+                        <h3 class="colum_name_text"id="text_colum"> Legal team </h3>
+                        <ul class="colum_list">
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link"id="text_colum"> Privacy </a>
+                            </li>
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link" id="text_colum"> Terms of Uer</a>
+                            </li>
+                            <li class="colum_text">
+                                <a href="" class="colum_text_link" id="text_colum"> Cookis</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <hr>
+            <div class="footer_ending">
+                <p class="text"> @Meseum2023. All right reserved. </p>
+            </div>
+        </footer>
+    </main>
+
+   
+
+
+  <script src="../js/trangChu.js"></script>
+
+
 </body>
 </html>
 
