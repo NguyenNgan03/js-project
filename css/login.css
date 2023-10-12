@@ -6,7 +6,7 @@
 
 
 body{
-    background-image: url(../image/Rectangle\ 7133751.png);
+    background-image: url();
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,12 +16,12 @@ body{
 }
 
 
-.wrap{
+.loginForm{
     background-color: rgb(195, 222, 214, 0.8);
     width: 400px;
-    height: 600px;
-    margin-left: 60%;
-    margin-top: 20px;
+    height: 510px;
+    margin-left: 40%;
+    margin-top: 40px;
     border-radius: 10px;
 }
 h1{
@@ -29,16 +29,18 @@ h1{
     padding-top: 40px;
 }
 h6{
-    margin-left: 130px;
+    margin-left: 160px;
 }
 .mb-3{
     margin: 20px;
     width: 350px;
 }
 .btn-btn-primary{
-    margin: 160px;
+    margin: 30px;
+    margin-left: 110px;
     margin-top: 20px;
-    width: 100px;
+    width: 50%;
+    height: 40px;
     background-color: rgb(240, 155, 27);
     border-radius: 10px;
 }
