@@ -1,3 +1,9 @@
+$("#button").click(function() {  
+    $("#box form").toggle("slow");
+    return false;
+  });
+
+
 var user =
     [
         {
@@ -9,57 +15,6 @@ var user =
 
         },
     ]
-// Lấy các phần tử HTML
-const loginButton = document.getElementById("login-button");
-const loginForm = document.querySelector(".loginForm");
-const signupForm = document.querySelector(".wrap");
-
-// Hiển thị biểu mẫu đăng nhập
-function showLoginForm() {
-  loginForm.style.display = "block";
-  signupForm.style.display = "none";
-}
-
-// Xử lý sự kiện khi người dùng submit biểu mẫu đăng nhập
-loginForm.addEventListener("submit", function (e) {
-  e.preventDefault(); // Ngăn chặn hành vi mặc định của form
-
-  // Lấy giá trị từ các trường input
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-
-  // Thực hiện xử lý đăng nhập ở đây (ví dụ: in giá trị đăng nhập ra console)
-  console.log("Đăng nhập - Tên đăng nhập: " + username);
-  console.log("Đăng nhập - Mật khẩu: " + password);
-
-  // Sau khi xử lý đăng nhập, chuyển hướng người dùng đến trang khác
-  if (username === "Hoành hồ" && password === "12345678") {
-    window.location.href = "../html/home.html";
-  } else {
-    alert("Đăng nhập không hợp lệ. Vui lòng thử lại!");
-  }
-});
-
-// Xử lý sự kiện khi người dùng submit biểu mẫu đăng ký
-signupForm.addEventListener("submit", function (e) {
-  e.preventDefault(); // Ngăn chặn hành vi mặc định của form
-
-  // Lấy giá trị từ các trường input
-  const username = document.getElementById("username").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirm").value;
-  const phone = document.getElementById("phone").value;
-
-  // Thực hiện xử lý đăng ký ở đây (ví dụ: in giá trị đăng ký ra console)
-  console.log("Đăng ký - Tên đăng nhập: " + username);
-  console.log("Đăng ký - Email: " + email);
-  console.log("Đăng ký - Mật khẩu: " + password);
-  console.log("Đăng ký - Xác nhận mật khẩu: " + confirmPassword);
-  console.log("Đăng ký - Số điện thoại: " + phone);
-
-  // Sau khi xử lý đăng ký, bạn có thể chuyển hướng người dùng đến trang khác hoặc thực hiện các hành động khác
-});
 
 
 // đẩy mảng user vào local

@@ -77,7 +77,7 @@ for(let i=0; i<filteredProds.length; i++){
             <p class="card-text">${filteredProds[i].desc}</p>
             <br>
             <div class="text-end">
-              <a href="#" class="btn btn-primary">Booking </a>
+              <a href="detail.html?id=${filteredProds[i].id}" class="btn btn-primary">Booking </a>
             </div>
           </div>
         </div>
