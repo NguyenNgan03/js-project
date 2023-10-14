@@ -1,0 +1,60 @@
+{
+    "listTicket":[
+        {
+            "ID": 1,
+            "MuseumName": "Bảo tàng A",
+            "CustomerName": "Khách hàng 1",
+            "Address": "Địa chỉ 1",
+            "Quantity": 2,
+            "Date": "2023-10-11",
+            "Phone": "123456789",
+            "Email": "email1@example.com",
+            "Total": 100,
+            "PaymentMethod": "Cash"
+        },
+        {
+            "ID": 2,
+            "MuseumName": "Bảo tàng A",
+            "CustomerName": "Khách hàng 1",
+            "Address": "Địa chỉ 1",
+            "Quantity": 2,
+            "Date": "2023-10-11",
+            "Phone": "123456789",
+            "Email": "email1@example.com",
+            "Total": 100,
+            "PaymentMethod": "Cash"
+        },
+        {
+            "ID": 3,
+            "MuseumName": "Bảo tàng A",
+            "CustomerName": "Khách hàng 1",
+            "Address": "Địa chỉ 1",
+            "Quantity": 2,
+            "Date": "2023-10-11",
+            "Phone": "123456789",
+            "Email": "email1@example.com",
+            "Total": 100,
+            "PaymentMethod": "Cash"
+        },
+        {
+            "ID": 4,
+            "MuseumName": "Bảo tàng A",
+            "CustomerName": "Khách hàng 1",
+            "Address": "Địa chỉ 1",
+            "Quantity": 2,
+            "Date": "2023-10-11",
+            "Phone": "123456789",
+            "Email": "email1@example.com",
+            "Total": 100,
+            "PaymentMethod": "Cash"
+        }
+    ],
+    "user" :[
+        {
+            
+        }
+    ],
+    
+    
+}
+    
