@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- HTML -->
+  <!-- !-- Navbar -- -->
   <div class="navbar">
     <p><b>CRUD OPERATIONS</b></p>
     <img src="../image/Circle Picture.png" alt="Profile Picture">
@@ -19,44 +19,69 @@
       <li><a href="#"><i class="fa-solid fa-bookmark"></i> Product</a></li>
       <li><a href="#"><i class="fa-solid fa-graduation-cap"></i> User</a></li>
       <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
-    
     </ul>
     <button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
   </div>
+
+  <!-- -- -----Data------- -- -->
   <div class="content">
     <div class="icon">
       <div class="bell-icon"><i class="fa-regular fa-bell"></i></div>
       <div class="user-icon"><i class="fa-solid fa-user"></i></div>
       <span>Admin</span>
     </div> 
-    <table class="table">
+    <table class="table" id="userTable">
       <thead>
-        <tr>
-          <th>User</th>
-          <th colspan="4"><button class="add-user-btn">Add User</button></th>
-        </tr>
-        <tr>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Phone</th>
-          <th>Email</th>
-        </tr>
+          <tr>
+              <th>User</th>
+              <th colspan="4"><button class="add-user-btn" onclick="showAddUserForm()">Add User</button></th>
+          </tr>
+          <tr>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Action</th>
+          </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Nhi</td>
-          <td>Tuong</td>
-          <td>123456789</td>
-          <td>nhi@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Hoai</td>
-          <td>Nguyen</td>
-          <td>987654321</td>
-          <td>hoai@gmail.com</td>
-        </tr>
+      <tbody id="tbody">
+          <!-- <tr>
+              <td>Nhi</td>
+              <td>Tuong</td>
+              <td>123456789</td>
+              <td>nhi@gmail.com</td>
+              <td>
+                  <button onclick="editUser(1)">Edit</button>
+                  <button onclick="deleteUser(1)">Delete</button>
+              </td>
+          </tr>
+          <tr>
+              <td>Hoai</td>
+              <td>Nguyen</td>
+              <td>987654321</td>
+              <td>hoai@gmail.com</td>
+              <td>
+                  <button onclick="editUser(2)">Edit</button>
+                  <button onclick="deleteUser(2)">Delete</button>
+              </td>
+          </tr> -->
       </tbody>
-    </table>
+  </table>
+</div>
+
+  <div id="addUserForm" style="display: none;">
+    <h2>Add User</h2>
+    <form id="userForm" onsubmit="addUser(event)">
+        <input type="text" id="firstNameInput" placeholder="First Name" required>
+        <input type="text" id="lastNameInput" placeholder="Last Name" required>
+        <input type="tel" id="phoneInput" placeholder="Phone" required>
+        <input type="email" id="emailInput" placeholder="Email" required>
+        <input  id="idInput" type="hidden">
+        <button type="submit">Save</button>
+        <button type="button" onclick="hideAddUserForm()">Cancel</button>
+    </form>
+  </div>
+  <script src="../js/user.js"></script>
   </div>
 </body>
 </html>
