@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Modern Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/dashBoard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(../image/1.jpeg)"></div>
+                <h3>David Green</h3>
+                <small>Art Director</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="" class="active">
+                        <span class="fa-solid fa-house" style="color:white;"></span>
+                            <small>Home</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="fa-solid fa-user" style="color:white;"></span>
+                            <small>Profile</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="fa-solid fa-layer-group" style="color:white;"></span>
+                            <small>Products</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="fa fa-graduation-cap" style="color:white;"></span>
+                            <small>User</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="fa-solid fa-square-poll-vertical" style="color:white;"></span>
+                            <small>Report</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="fa-solid fa-gear" style="color:white;"></span>
+                            <small>Settings</small>
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="">
+                            <span class="fa fa-power-off"></span>
+                            <small>Logout</small>
+                         </a>
+                     </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="fa-solid fa-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="fa-solid fa-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="fa-solid fa-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(../image/1.jpeg)"></div>
+                    
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <main>    
+            <div class="page-content">
+            
+                <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>10</h2>
+                            <span class="fa-solid fa-user-friends fa-2xs"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>User</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>30</h2>
+                            <span class="fa-solid fa-layer-group"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Product</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>$500</h2>
+                            <span class="fa-solid fa-dollar"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Payments</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>50</h2>
+                            <span class="fa-solid fa-ticket"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Ticket</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </main>
+        
+    </div>
+</body>
+</html>
