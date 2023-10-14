@@ -1,104 +1,106 @@
-$("#button").click(function() {  
-    $("#box form").toggle("slow");
-    return false;
-  });
+let users = [
+    { id: 1, firstName: "Nhi", lastName: "Tuong", phone: "123456789", email: "nhi@gmail.com" },
+    { id: 2, firstName: "Hoai", lastName: "Nguyen", phone: "987654321", email: "hoai@gmail.com" }
+];
 
 
-var user =
-    [
-        {
-            id: "1",
-            username: "Hoành hồ",
-            email: "hoanhho@gmail.com",
-            password: "12345678",
-            role: "user"
 
-        },
-    ]
+const userTable = document.getElementById("userTable");
+const addUserForm = document.getElementById("addUserForm");
+
+function displayUsers() {
+ 
+
+  while(userTable.rows.length > 2) {
+    userTable.deleteRow(2);
+  }
+    users.forEach(user => {
+    
+        const row = userTable.insertRow();
+
+        row.innerHTML = `
+            <td>${user.firstName}</td>
+            <td>${user.lastName}</td>
+            <td>${user.phone}</td>
+            <td>${user.email}</td>
+            <td>
+                <button onclick="editUser(${user.id})">Edit</button>
+                <button onclick="deleteUser(${user.id})">Delete</button>
+            </td>
+        `;
+    });
+}
+
+function showAddUserForm() {
+    addUserForm.style.display = "block";
+}
+
+function hideAddUserForm() {
+    addUserForm.style.display = "none";
+    clearForm();
+}
+
+function clearForm() {
+    document.getElementById("firstNameInput").value = "";
+    document.getElementById("lastNameInput").value = "";
+    document.getElementById("phoneInput").value = "";
+    document.getElementById("emailInput").value = "";
+
+    document.getElementById("idInput").value = "";
+}
+
+// Tiếp tục phần mã JavaScript (script.js):
+
+function addUser(event) {
+    event.preventDefault();
+
+    const firstNameInput = document.getElementById("firstNameInput");
+    const lastNameInput = document.getElementById("lastNameInput");
+    const phoneInput = document.getElementById("phoneInput");
+    const emailInput = document.getElementById("emailInput");
+    const idInput = document.getElementById("idInput");
+
+    const newUser = {
+        id: idInput || users.length + 1,
+        firstName: firstNameInput.value,
+        lastName: lastNameInput.value,
+        phone: phoneInput.value,
+        email: emailInput.value
+    };
+    const userIndex = users.findIndex(user => user.id === Number(idInput.value));
+    const hasUser  =  userIndex !== -1
+
+    hasUser ? ( users[userIndex] = newUser) : users.push(newUser)
+
+    clearForm();
+    hideAddUserForm();
+    displayUsers();
+}
+
+function editUser(id) {
+    const user = users.find(user => user.id === id);
+    if (!user) return;
+
+    const firstNameInput = document.getElementById("firstNameInput");
+    const lastNameInput = document.getElementById("lastNameInput");
+    const phoneInput = document.getElementById("phoneInput");
+    const emailInput = document.getElementById("emailInput");
+    const idInput = document.getElementById("idInput");
+
+    firstNameInput.value = user.firstName;
+    lastNameInput.value = user.lastName;
+    phoneInput.value = user.phone;
+    emailInput.value = user.email;
+    idInput.value = user.id;
+
+    showAddUserForm();
+}
+
+function deleteUser(id) {
+    users = users.filter(user => user.id !== id);
+    displayUsers();
+}
+
+displayUsers();
 
 
-// đẩy mảng user vào local
-    var saveUser =function (){
-         localStorage.setItem('listUser',JSON.stringify(user))
-     }
-    //lấy list user 
-     var loadUser = function(){
-         user = JSON.parse(localStorage.getItem('listUser'))
-     }
-     if (localStorage.getItem("listUser")!=null){
-        
-        loadUser();
-     }
-     saveUser();
-// chức năng đăng kí
-     var signIn = function (){
-         var User = {
-             id: "USER"+parseInt( user.length+1),
-             username: document.getElementById("username").value,
-             mail: document.getElementById("email").value,
-             password:  document.getElementById("password").value,
-             confirm:  document.getElementById("confirm").value,
-             phone:  document.getElementById("phone").value,
-             role : "user",
-         }
-         alert("Đăng kí thành công");
-         user.push(User);
-         localStorage.setItem('listUser',JSON.stringify(user));
-         Save();
-         window.location.href ='trangChu.html';
-      window.location.reload();
-     }
-   // chức năng cập nhật thông tin của người dùng
-     var signupArr = [];
-     var saveLogin =function (){
-        localStorage.setItem('Signup',JSON.stringify(signupArr))
-    }
-     var loadLogin = function(){
-        signupArr = JSON.parse(localStorage.getItem('Signup'))
-    }
-    if (localStorage.getItem("Signup")!=null){
-       
-        loadLogin();
-    }
-// saveLogin();
-
-        var signUp = function(){
-            var k=-1;
-            for (var i in user){
-                var data = JSON.parse(JSON.stringify(user[i]))
-                if (
-                    ((document.getElementById("username").value == data.username) &&
-                        (document.getElementById("password").value == data.password)
-                        && (data.role == "admin")
-                    )
-                ) {
-                    k = i;
-                    alert("đăng nhập thành công");
-        
-                    window.location.href = '../html/trangChu.html'; 
-                }
-                if (
-                    ((document.getElementById("name").value == data.username) &&
-                        (document.getElementById("password").value == data.password)
-                        && (data.role == "user")
-                    )
-                ) {
-                            alert("đăng nhập thành công");
-                               k=i; 
-                                window.location.href = '../user/info.html';
-                                var userLogin = {
-                                    username: document.getElementById("name").value,
-                                    password: document.getElementById("password").value
-                                }     
-                                signupArr.push(userLogin);
-
-                                localStorage.setItem('Signup',JSON.stringify(signupArr));
-                                
-                                saveLogin();
-                }
-            }
-
-            if (k == -1) {
-                alert("đăng nhập không thành công");
-            }
-        }
