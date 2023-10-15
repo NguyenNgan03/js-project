@@ -20,7 +20,7 @@ body{
 .loginForm-hidden{
     background-color: rgb(195, 222, 214, 0.8);
     width: 400px;
-    height: 540px;
+    height: 450px;
     margin-left: 40%;
     margin-top: 40px;
     border-radius: 10px;
@@ -38,7 +38,7 @@ h6{
 }
 .btn-btn-primary{
     margin: 30px;
-    margin-left: 110px;
+    margin-left: 100px;
     margin-top: 20px;
     width: 50%;
     height: 40px;
