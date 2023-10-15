@@ -1,6 +1,16 @@
 let users = [
-    { id: 1, firstName: "Nhi", lastName: "Tuong", phone: "123456789", email: "nhi@gmail.com" },
-    { id: 2, firstName: "Hoai", lastName: "Nguyen", phone: "987654321", email: "hoai@gmail.com" }
+    { id: 1, userName: "Nhi", email: "nhi@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 2, userName: "Hoai", email: "hoai@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 3, userName: "Ngan", email: "ngan@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 4, userName: "Huyen", email: "huyen@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 5, userName: "Hung", email: "hung@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 6, userName: "Thu", email: "thu@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 7, userName: "Sang", email: "sang@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 8, userName: "Le", email: "le@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 9, userName: "Duyen", email: "duyen@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 10, userName: "Quyen", email: "quyen@gmail.com", password: "123456789", phone: "987654321" },
+    { id: 11, userName: "Hoanh", email: "hoanh@gmail.com", password: "123456789", phone: "987654321" }
+    
 ];
 
 
@@ -19,10 +29,10 @@ function displayUsers() {
         const row = userTable.insertRow();
 
         row.innerHTML = `
-            <td>${user.firstName}</td>
-            <td>${user.lastName}</td>
-            <td>${user.phone}</td>
+            <td>${user.userName}</td>
             <td>${user.email}</td>
+            <td>${user.password}</td>
+            <td>${user.phone}</td>
             <td>
                 <button onclick="editUser(${user.id})">Edit</button>
                 <button onclick="deleteUser(${user.id})">Delete</button>
@@ -41,31 +51,30 @@ function hideAddUserForm() {
 }
 
 function clearForm() {
-    document.getElementById("firstNameInput").value = "";
-    document.getElementById("lastNameInput").value = "";
-    document.getElementById("phoneInput").value = "";
+    document.getElementById("userNameInput").value = "";
     document.getElementById("emailInput").value = "";
+    document.getElementById("passwordInput").value = "";
+    document.getElementById("phoneInput").value = "";
 
     document.getElementById("idInput").value = "";
 }
 
-// Tiếp tục phần mã JavaScript (script.js):
 
 function addUser(event) {
     event.preventDefault();
 
-    const firstNameInput = document.getElementById("firstNameInput");
-    const lastNameInput = document.getElementById("lastNameInput");
-    const phoneInput = document.getElementById("phoneInput");
+    const userNameInput = document.getElementById("userNameInput");
     const emailInput = document.getElementById("emailInput");
+    const passwordInput = document.getElementById("passwordInput");
+    const phoneInput = document.getElementById("phoneInput");
     const idInput = document.getElementById("idInput");
 
     const newUser = {
         id: idInput || users.length + 1,
-        firstName: firstNameInput.value,
-        lastName: lastNameInput.value,
-        phone: phoneInput.value,
-        email: emailInput.value
+        userName: userNameInput.value,
+        email: emailInput.value,
+        password: passwordInput.value,
+        phone: phoneInput.value
     };
     const userIndex = users.findIndex(user => user.id === Number(idInput.value));
     const hasUser  =  userIndex !== -1
@@ -81,16 +90,16 @@ function editUser(id) {
     const user = users.find(user => user.id === id);
     if (!user) return;
 
-    const firstNameInput = document.getElementById("firstNameInput");
-    const lastNameInput = document.getElementById("lastNameInput");
-    const phoneInput = document.getElementById("phoneInput");
+    const userNameInput = document.getElementById("userNameInput");
     const emailInput = document.getElementById("emailInput");
+    const passwordInput = document.getElementById("passwordInput");
+    const phoneInput = document.getElementById("phoneInput");
     const idInput = document.getElementById("idInput");
 
-    firstNameInput.value = user.firstName;
-    lastNameInput.value = user.lastName;
-    phoneInput.value = user.phone;
+    userNameInput.value = user.userName;
     emailInput.value = user.email;
+    passwordInput.value = user.password;
+    phoneInput.value = user.phone;
     idInput.value = user.id;
 
     showAddUserForm();

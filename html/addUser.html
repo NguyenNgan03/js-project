@@ -4,84 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../css/dashBoard.css">
   <link rel="stylesheet" href="../css/addUser.css">
   <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- !-- Navbar -- -->
-  <div class="navbar">
-    <p><b>CRUD OPERATIONS</b></p>
-    <img src="../image/Circle Picture.png" alt="Profile Picture">
-    <p>Khánh Nhi</p>
-    <p class="admin">Admin</p>
-    <ul>
-      <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="#"><i class="fa-solid fa-bookmark"></i> Product</a></li>
-      <li><a href="#"><i class="fa-solid fa-graduation-cap"></i> User</a></li>
-      <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
-    </ul>
-    <button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+    <div class="sidebar">
+      <div class="side-content">
+          <div class="profile">
+              <div class="profile-img bg-img" style="background-image: url(../image/1.jpeg)"></div>
+              <h3>David Green</h3>
+              <small>Art Director</small>
+          </div>
+          <div class="side-menu">
+              <ul>
+                  <li>
+                    <a href="" class="active">
+                      <span class="fa-solid fa-house" style="color:white;"></span>
+                          <small>Home</small>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="">
+                          <span class="fa-solid fa-user" style="color:white;"></span>
+                          <small>Profile</small>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="">
+                          <span class="fa-solid fa-layer-group" style="color:white;"></span>
+                          <small>Products</small>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="">
+                          <span class="fa fa-graduation-cap" style="color:white;"></span>
+                          <small>User</small>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="">
+                          <span class="fa-solid fa-square-poll-vertical" style="color:white;"></span>
+                          <small>Report</small>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="">
+                          <span class="fa-solid fa-gear" style="color:white;"></span>
+                          <small>Settings</small>
+                      </a>
+                  </li>
+                  <br>
+                  <li>
+                      <a href="">
+                          <span class="fa fa-power-off"></span>
+                          <small>Logout</small>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
   </div>
 
   <!-- -- -----Data------- -- -->
   <div class="content">
-    <div class="icon">
-      <div class="bell-icon"><i class="fa-regular fa-bell"></i></div>
-      <div class="user-icon"><i class="fa-solid fa-user"></i></div>
-      <span>Admin</span>
-    </div> 
-    <table class="table" id="userTable">
-      <thead>
-          <tr>
-              <th>User</th>
-              <th colspan="4"><button class="add-user-btn" onclick="showAddUserForm()">Add User</button></th>
-          </tr>
-          <tr>
-              <th>First name</th>
-              <th>Last name</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>Action</th>
-          </tr>
-      </thead>
-      <tbody id="tbody">
-          <!-- <tr>
-              <td>Nhi</td>
-              <td>Tuong</td>
-              <td>123456789</td>
-              <td>nhi@gmail.com</td>
-              <td>
-                  <button onclick="editUser(1)">Edit</button>
-                  <button onclick="deleteUser(1)">Delete</button>
-              </td>
-          </tr>
-          <tr>
-              <td>Hoai</td>
-              <td>Nguyen</td>
-              <td>987654321</td>
-              <td>hoai@gmail.com</td>
-              <td>
-                  <button onclick="editUser(2)">Edit</button>
-                  <button onclick="deleteUser(2)">Delete</button>
-              </td>
-          </tr> -->
-      </tbody>
-  </table>
-</div>
+      <table class="table" id="userTable">
+        <header>
+          <div class="header-content">
+              <label for="menu-toggle">
+                  <span class="fa-solid fa-bars"></span>
+              </label>
+              <div class="header-menu">
+                  <label for="">
+                      <span class="fa-solid fa-search"></span>
+                  </label>
+                  <div class="notify-icon">
+                      <span class="fa-solid fa-bell"></span>
+                      <span class="notify">3</span>
+                  </div>
+                  <div class="user">
+                      <div class="bg-img" style="background-image: url(../image/1.jpeg)"></div>
+                  </div>
+              </div>
+          </div>
+        </header>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
 
-  <div id="addUserForm" style="display: none;">
-    <h2>Add User</h2>
-    <form id="userForm" onsubmit="addUser(event)">
-        <input type="text" id="firstNameInput" placeholder="First Name" required>
-        <input type="text" id="lastNameInput" placeholder="Last Name" required>
-        <input type="tel" id="phoneInput" placeholder="Phone" required>
-        <input type="email" id="emailInput" placeholder="Email" required>
-        <input  id="idInput" type="hidden">
-        <button type="submit">Save</button>
-        <button type="button" onclick="hideAddUserForm()">Cancel</button>
-    </form>
-  </div>
-  <script src="../js/user.js"></script>
+
+    <div id="addUserForm" style="display: none;">
+      <h2>Add User</h2>
+      <form id="userForm" onsubmit="addUser(event)">
+          <input type="text" id="userNameInput" placeholder="User Name" required>
+          <input type="email" id="emailInput" placeholder="Email" required>
+          <input type="password" id="passwordInput" placeholder="Password" required>
+          <input type="tel" id="phoneInput" placeholder="Phone" required>
+          <input  id="idInput" type="hidden">
+          <button type="submit">Save</button>
+          <button type="button" onclick="hideAddUserForm()">Cancel</button>
+      </form>
+    </div>
+    <script src="../js/user.js"></script>
   </div>
 </body>
 </html>

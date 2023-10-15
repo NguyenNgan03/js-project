@@ -81,6 +81,7 @@
     .content {
       margin-left: 200px;
       padding: 20px;
+       
     }
     
     .icon {
@@ -102,6 +103,7 @@
     .table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 60px; /* khoảng cách giữa header và tbody */
     }
     
     .table th,
