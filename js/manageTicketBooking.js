@@ -22,16 +22,22 @@ var ticketList = [
         Email: "email2@example.com",
         Total: 50,
         PaymentMethod: "Credit Card"
+    },
+    {
+        ID: 1,
+        MuseumName: "Bảo tàng A",
+        CustomerName: "Khách hàng 1",
+        Address: "Địa chỉ 1",
+        Quantity: 2,
+        Date: "2023-10-11",
+        Phone: "123456789",
+        Email: "email1@example.com",
+        Total: 100,
+        PaymentMethod: "Cash"
     }
 ];
 
-// Kiểm tra xem Local Storage đã chứa dữ liệu chưa
-// var storedTicketList = JSON.parse(localStorage.getItem("ticketList"));
-// if (storedTicketList) {
-//     ticketList = storedTicketList;
-// }
 
-// Lấy tham chiếu đến tbody của bảng
 var tableBody = document.getElementById("tbl");
 
 // Hàm để thêm một dòng mới vào bảng và cập nhật Local Storage
@@ -63,10 +69,10 @@ function addTicketToTable(ticket) {
     cellEmail.innerText = ticket.Email;
     cellTotal.innerText = ticket.Total;
     cellPaymentMethod.innerText = ticket.PaymentMethod;
-    cellAction.innerHTML = "<button>Xóa</button> <button>Sửa</button>";
+    cellAction.innerHTML = "<button>Thêm </button> <button>Xóa</button> <button>Sửa</button>";
 
     // Thêm đối tượng dữ liệu vào mảng ticketList và lưu vào Local Storage
-    ticketList.push(ticket);
+    // ticketList.push(ticket);
     localStorage.setItem("ticketList", JSON.stringify(ticketList));
 }
 
