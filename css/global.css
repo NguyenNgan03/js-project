@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+}
+
+:root {
+    --color-primary: rgba(255, 195, 0, 1);
+    --color-tickIcon: rgba(242, 142, 19, 1);
+    --color-description: #2F2F37;
+}
