@@ -1,82 +1,145 @@
-var ticketList = [
+function total(){
+    var totalTicket = document.getElementById("quantity-ticket").value;
+    var priceTicket = document.getElementById("price").textContent;
+    var totalPriceElement = document.getElementById("total-price");
+
+    if (!isNaN(totalTicket)) {
+        var total = Number(totalTicket) * Number(priceTicket); 
+        document.getElementById("total-price").value = total;
+        console.log(totalTicket,priceTicket)
+        document.getElementById("total-price").innerHTML = total;
+        totalPriceElement.value = total;
+    } else {
+        document.getElementById("total-price").value = "Nhập sai thông tin vé hoặc giá vé";
+    }
+    
+}
+let ticketList = [
     {
         ID: 1,
-        MuseumName: "Bảo tàng A",
-        CustomerName: "Khách hàng 1",
-        Address: "Địa chỉ 1",
-        Quantity: 2,
-        Date: "2023-10-11",
-        Phone: "123456789",
-        Email: "email1@example.com",
-        Total: 100,
-        PaymentMethod: "Cash"
+        museumName: "Bảo tàng A",
+        customerName: "Khách hàng 1",
+        address: "Địa chỉ 1",
+        quantity: 2,
+        date: "2023-10-11",
+        phone: "123456789",
+        email: "email1@example.com",
+        total: 100,
+        paymentMethod: "Cash"
     },
     {
         ID: 2,
-        MuseumName: "Bảo tàng B",
-        CustomerName: "Khách hàng 2",
-        Address: "Địa chỉ 2",
-        Quantity: 1,
-        Date: "2023-10-12",
-        Phone: "987654321",
-        Email: "email2@example.com",
-        Total: 50,
-        PaymentMethod: "Credit Card"
+        museumName: "Bảo tàng B",
+        customerName: "Khách hàng 2",
+        address: "Địa chỉ 2",
+        quantity: 1,
+        date: "2023-10-12",
+        phone: "987654321",
+        email: "email2@example.com",
+        total: 50,
+        paymentMethod: "Credit Card"
     },
     {
-        ID: 1,
-        MuseumName: "Bảo tàng A",
-        CustomerName: "Khách hàng 1",
-        Address: "Địa chỉ 1",
-        Quantity: 2,
-        Date: "2023-10-11",
-        Phone: "123456789",
-        Email: "email1@example.com",
-        Total: 100,
-        PaymentMethod: "Cash"
+        ID: 3,
+        museumName: "Bảo tàng A",
+        customerName: "Khách hàng 1",
+        address: "Địa chỉ 1",
+        quantity: 2,
+        date: "2023-10-11",
+        phone: "123456789",
+        email: "email1@example.com",
+        total: 100,
+        paymentMethod: "Cash"
     }
 ];
 
+const tableTicket = document.getElementById("tbl");
+console.log(tableTicket);
+var id = 0;
 
-var tableBody = document.getElementById("tbl");
+function displayTicket() {
+    ticketList.forEach(ticket => {
+        const row = tableTicket.insertRow();
+        row.innerHTML = `
+            <td>${id++}</td>
+            <td>${ticket.museumName}</td>
+            <td>${ticket.customerName}</td>
+            <td>${ticket.address}</td>
+            <td>${ticket.quantity}</td>
+            <td>${ticket.date}</td>
+            <td>${ticket.phone}</td>
+            <td>${ticket.email}</td>
+            <td>${ticket.total}</td>
+            <td>${ticket.paymentMethod}</td>
+            <td>
+                <button onclick="addTicket(${ticket.ID})">Add</button>
+                <button onclick="deleteTicket(${ticket.ID})">Delete</button>
+                <button onclick="editTicket(${ticket.ID})">Edit</button>
+            </td>
+        `;
+    });
 
-// Hàm để thêm một dòng mới vào bảng và cập nhật Local Storage
-function addTicketToTable(ticket) {
-    // Tạo một hàng mới
-    var newRow = tableBody.insertRow();
-
-    // Tạo các ô dữ liệu cho hàng mới
-    var cellID = newRow.insertCell(0);
-    var cellMuseumName = newRow.insertCell(1);
-    var cellCustomerName = newRow.insertCell(2);
-    var cellAddress = newRow.insertCell(3);
-    var cellQuantity = newRow.insertCell(4);
-    var cellDate = newRow.insertCell(5);
-    var cellPhone = newRow.insertCell(6);
-    var cellEmail = newRow.insertCell(7);
-    var cellTotal = newRow.insertCell(8);
-    var cellPaymentMethod = newRow.insertCell(9);
-    var cellAction = newRow.insertCell(10);
-
-    // Gán giá trị từ dữ liệu vào các ô dữ liệu
-    cellID.innerText = ticket.ID;
-    cellMuseumName.innerText = ticket.MuseumName;
-    cellCustomerName.innerText = ticket.CustomerName;
-    cellAddress.innerText = ticket.Address;
-    cellQuantity.innerText = ticket.Quantity;
-    cellDate.innerText = ticket.Date;
-    cellPhone.innerText = ticket.Phone;
-    cellEmail.innerText = ticket.Email;
-    cellTotal.innerText = ticket.Total;
-    cellPaymentMethod.innerText = ticket.PaymentMethod;
-    cellAction.innerHTML = "<button>Thêm </button> <button>Xóa</button> <button>Sửa</button>";
-
-    // Thêm đối tượng dữ liệu vào mảng ticketList và lưu vào Local Storage
-    // ticketList.push(ticket);
-    localStorage.setItem("ticketList", JSON.stringify(ticketList));
 }
 
-// Thêm dữ liệu từ mảng ticketList vào bảng
-ticketList.forEach(function (ticket) {
-    addTicketToTable(ticket);
-});
+function createTicketInfo(){
+    console.log("Button clicked");
+    const museumName = document.getElementById("msu-name").textContent;
+    const customerName = document.getElementById("name").value;
+    
+    const address = document.getElementById("address").value;
+    const quantity = document.getElementById("quantity-ticket").value;
+    const date = document.getElementById("date").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const totalPrice = document.getElementById("total-price").value;
+    const paymentMethod = document.getElementById("payment").value;
+
+    const newTicket = {
+        ID: ticketList.length + 1, 
+        museumName: museumName,
+        customerName: customerName,
+        address: address,
+        quantity: quantity,
+        date: date,
+        phone: phone,
+        email: email,
+        total: parseFloat(totalPrice), 
+        paymentMethod: paymentMethod
+    }
+
+    ticketList.push(newTicket);
+
+    while (tableTicket.row.length > 1) {
+        tableTicket.deleteRow(1);
+    }
+
+    displayTicket();
+
+    document.getElementById("name").value = "";
+    document.getElementById("birthdate").value = "";
+    document.getElementById("address").value = "";
+    document.getElementById("quantity-ticket").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("total-price").value = "";
+    document.getElementById("payment").value = "card";
+
+    localStorage.setItem('ticketList', JSON.stringify(ticketList));
+}
+
+// function addTicket() {
+   
+    
+
+// }
+
+// function deleteTicket(id) {
+    
+// }
+
+// function editTicket(id) {
+   
+// }
+
+displayTicket();

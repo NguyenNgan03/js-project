@@ -6,8 +6,6 @@
     <title>Đặt vé bảo tàng</title>
     <link rel="stylesheet" href="../css/bookTicket.css">
     <!-- Include Bootstrap CSS -->
-    <script src="../js/manegeTitketBooking.js"></script>
-    <script src="../js/bookTicket.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -25,7 +23,7 @@
           <span class="icon-bar"></span>                        
         </button>
         <div class="container">
-            <img class="logo1 navbar-brand" src="../image/Group 67.png" alt="" >
+            <img class="logo1 navbar-brand" src="../image/Logo.png" alt="" >
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Book museum tickets</a>
           </div>
@@ -100,7 +98,7 @@
                     <option value="cash">Tiền mặt</option>
                 </select>
                 <button style="background-color: #f6dd55; color: black " type="button" onclick="total()"> OK </button>
-                <button style="background-color: #f6dd55; color: black " type="button" onclick="createTicketInfo()">Xác nhận</button>
+                <button style="background-color: #f6dd55; color: black " type="submit" onclick="createTicketInfo()">Xác nhận</button>
                 <button style="background-color: #f6dd55; color: black" type="reset">Hủy</button>
             </form>
         </div>
@@ -108,5 +106,7 @@
 
     <!-- Include Bootstrap JS at the end of your HTML -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/manageTicketBooking.js"></script>
 </body>
 </html>
