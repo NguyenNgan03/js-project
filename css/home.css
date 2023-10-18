@@ -99,7 +99,7 @@
 }
 
 img {
-    height: 350px;
+    height: 250px;
 }
 
 .card {
@@ -113,8 +113,8 @@ img {
 }
 
 .img {
-    height: 350px;
-    width: 500px;
+    height: 320px;
+    width: 410px;
     border-radius: 10px;
 }
 

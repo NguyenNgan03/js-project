@@ -17,7 +17,7 @@ const product1 = [{
   id: '2',
   name: 'Museum of military zone 5',
   imgSrc: '../image/2.jpg',
-  desc: "Museum of Military Zone 5, Da Nang is a military museum located at No. <br><br>",
+  desc: "Museum of Military Zone 5, Da Nang is a military museum located at No. <br><br><br>",
   categoryType: 1,
 },{
   id: '2',
@@ -38,7 +38,7 @@ const product2 = [{
   name: 'War Remnants Museum',
   imgSrc: '../image/6.jpg',
   price: '150.000',
-  location: '28 Đ. Võ Văn Tần, Võ Thị Sáu, TP.Hồ Chí Minh',
+  location: '28 Đ. Võ Văn Tần, Võ Thị Sáu, TP.Hồ Chí Minh<br>',
   categoryType: 2,
 }, {
   id: '6',
@@ -52,14 +52,14 @@ const product2 = [{
   name: 'Thanh Ha Terracotta Park',
   imgSrc: '../image/8.jpg',
   price: '120.000',
-  location: 'Phạm Phán, Thanh Hà, Hội An, Quảng Nam',
+  location: 'Phạm Phán, Thanh Hà, Hội An, Quảng Nam<br>',
   categoryType: 2,
 }, {
   id: '8',
   name: 'Ho Chi Minh Museum',
   imgSrc: '../image/9.jpg',
   price: '200.000',
-  location: '19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,',
+  location: '19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,<br>',
   categoryType: 2,
 }]
 
