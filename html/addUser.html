@@ -20,7 +20,7 @@
           <div class="side-menu">
               <ul>
                   <li>
-                    <a href="" class="active">
+                    <a href="../html/dashBoard.html" >
                       <span class="fa-solid fa-house" style="color:white;"></span>
                           <small>Home</small>
                       </a>
@@ -38,7 +38,7 @@
                       </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href="" class="active">
                           <span class="fa fa-graduation-cap" style="color:white;"></span>
                           <small>User</small>
                       </a>
@@ -88,12 +88,23 @@
                   </div>
               </div>
           </div>
+        <tr>
+            <th>User</th>
+            <th colspan="5"><button class="add-user-btn" onclick="showAddUserForm()">Add User</button></th>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>User Name</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Phone</td>
+            <td>Action</td>
+        </tr>
         </header>
         <tbody id="tbody">
-            
+                  
         </tbody>
     </table>
-
 
     <div id="addUserForm" style="display: none;">
       <h2>Add User</h2>

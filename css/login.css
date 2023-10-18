@@ -20,7 +20,7 @@ body{
 .loginForm-hidden{
     background-color: rgb(195, 222, 214, 0.8);
     width: 400px;
-    height: 450px;
+    height: 490px;
     margin-left: 40%;
     margin-top: 40px;
     border-radius: 10px;
@@ -45,3 +45,6 @@ h6{
     background-color: rgb(240, 155, 27);
     border-radius: 10px;
 }
+.error {
+    color: red;
+  }

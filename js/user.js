@@ -17,7 +17,7 @@ let users = [
 
 const userTable = document.getElementById("userTable");
 const addUserForm = document.getElementById("addUserForm");
-
+var id = 0;
 function displayUsers() {
  
 
@@ -29,6 +29,7 @@ function displayUsers() {
         const row = userTable.insertRow();
 
         row.innerHTML = `
+            <td>${id++}</td>
             <td>${user.userName}</td>
             <td>${user.email}</td>
             <td>${user.password}</td>
@@ -39,6 +40,7 @@ function displayUsers() {
             </td>
         `;
     });
+    localStorage.setItem("listUser",JSON.stringify(users));
 }
 
 function showAddUserForm() {
