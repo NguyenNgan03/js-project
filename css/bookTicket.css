@@ -1,5 +1,95 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+}
+#header {
+    padding: 2px 20px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    background-color: black;
+    color: white;
+}
 
+#menu .item a:hover{
+    color: yellow;
+}
+#header .logo {
+    display: flex;
+    margin-top: 10px;
+}
+#header .logo p {
+    margin-left: 20px;
+    margin-top: 16px;
+}
+#menu {
+    list-style:none;
+    display: flex;
+}
+
+#menu .item {
+    margin:0px 25px;
+}
+
+#menu .item a {
+    color: white;
+    text-decoration: none;
+}
+
+#icon {
+    display: flex;
+}
+
+#icon .item {
+    margin-left:22px;
+    width:20px;
+    height: 20px;
+}
+
+#banner {
+    display: flex;
+    position: relative;
+}
+
+#banner .carousel-item h2 {
+    font-size:40px;
+}
+
+#banner .carousel-item button {
+    width: 130px;
+    height: 40px;
+    margin-top:30px;
+    margin-bottom:40px;
+    background: rgb(46, 110, 229);
+    border:none;
+    outline:none;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition:0.4s;
+}
+
+#banner .carousel-item button:hover {
+    background:orange;
+}
 /* Add your custom CSS styles here */
+
+.museum-card {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.imgbaotang img {
+
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+/* form */
 body {
     background-color: #f0f0f0;
     padding: 20px;
