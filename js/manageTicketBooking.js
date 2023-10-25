@@ -14,78 +14,48 @@ function total(){
     }
     
 }
-let ticketList = [
-    {
-        ID: 1,
-        museumName: "Bảo tàng A",
-        customerName: "Khách hàng 1",
-        address: "Địa chỉ 1",
-        quantity: 2,
-        date: "2023-10-11",
-        phone: "123456789",
-        email: "email1@example.com",
-        total: 100,
-        paymentMethod: "Cash"
-    },
-    {
-        ID: 2,
-        museumName: "Bảo tàng B",
-        customerName: "Khách hàng 2",
-        address: "Địa chỉ 2",
-        quantity: 1,
-        date: "2023-10-12",
-        phone: "987654321",
-        email: "email2@example.com",
-        total: 50,
-        paymentMethod: "Credit Card"
-    },
-    {
-        ID: 3,
-        museumName: "Bảo tàng A",
-        customerName: "Khách hàng 1",
-        address: "Địa chỉ 1",
-        quantity: 2,
-        date: "2023-10-11",
-        phone: "123456789",
-        email: "email1@example.com",
-        total: 100,
-        paymentMethod: "Cash"
-    }
-];
 
-const tableTicket = document.getElementById("tbl");
-console.log(tableTicket);
-var id = 0;
 
+let ticketList = load() || [];
+
+function load(){
+    return JSON.parse(localStorage.getItem("ticketList"));
+}
+function Save() {
+    localStorage.setItem("ticketList", JSON.stringify(ticketList));
+}
 function displayTicket() {
+    const tableTicket = document.querySelector("#tbl tbody");
+    var id = 1;
+    let row = "";
     ticketList.forEach(ticket => {
-        const row = tableTicket.insertRow();
-        row.innerHTML = `
-            <td>${id++}</td>
-            <td>${ticket.museumName}</td>
-            <td>${ticket.customerName}</td>
-            <td>${ticket.address}</td>
-            <td>${ticket.quantity}</td>
-            <td>${ticket.date}</td>
-            <td>${ticket.phone}</td>
-            <td>${ticket.email}</td>
-            <td>${ticket.total}</td>
-            <td>${ticket.paymentMethod}</td>
-            <td>
-                <button onclick="addTicket(${ticket.ID})">Add</button>
-                <button onclick="deleteTicket(${ticket.ID})">Delete</button>
-                <button onclick="editTicket(${ticket.ID})">Edit</button>
-            </td>
+        row += `
+            <tr>
+            <td> ${id++} </td>
+            <td> ${ticket.museumName} </td>
+            <td> ${ticket.customerName} </td>
+            <td> ${ticket.address} </td>
+            <td> ${ticket.quantity} </td>
+            <td> ${ticket.total} </td>
+            <td> ${ticket.date} </td>
+            <td> ${ticket.phone} </td>
+            <td> ${ticket.email} </td>
+            <td> ${ticket.paymentMethod} </td>
+            <td> </td>
+            <td> <button onclick="deleteTicket(${ticket.ID})">Delete</button> </td>
+            
+           
+            </tr>
         `;
     });
 
+    tableTicket.innerHTML = row;
 }
 
 function createTicketInfo(){
     console.log("Button clicked");
     const museumName = document.getElementById("msu-name").textContent;
     const customerName = document.getElementById("name").value;
-    
     const address = document.getElementById("address").value;
     const quantity = document.getElementById("quantity-ticket").value;
     const date = document.getElementById("date").value;
@@ -94,6 +64,36 @@ function createTicketInfo(){
     const totalPrice = document.getElementById("total-price").value;
     const paymentMethod = document.getElementById("payment").value;
 
+    if (customerName.trim() === "") {
+        alert("Please enter a customer name.");
+        return;
+    }
+    
+    if (address.trim() === "") {
+        alert("Please enter an address.");
+        return;
+    }
+    
+    if (isNaN(quantity) || quantity <= 0) {
+        alert("Please enter a valid quantity of tickets.");
+        return;
+    }
+    
+    if (phone.trim() === "" || !(/^\d{10}$/.test(phone))) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+    }
+    
+    if (email.trim() === "" || !(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email))) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+    
+    if (isNaN(totalPrice)) {
+        alert("Invalid total price.");
+        return;
+    }
+    
     const newTicket = {
         ID: ticketList.length + 1, 
         museumName: museumName,
@@ -108,13 +108,8 @@ function createTicketInfo(){
     }
 
     ticketList.push(newTicket);
-
-    while (tableTicket.row.length > 1) {
-        tableTicket.deleteRow(1);
-    }
-
-    displayTicket();
-
+    Save();
+    alert("bạn đã book vé thành công");
     document.getElementById("name").value = "";
     document.getElementById("birthdate").value = "";
     document.getElementById("address").value = "";
@@ -124,22 +119,32 @@ function createTicketInfo(){
     document.getElementById("email").value = "";
     document.getElementById("total-price").value = "";
     document.getElementById("payment").value = "card";
-
-    localStorage.setItem('ticketList', JSON.stringify(ticketList));
+   
 }
 
-// function addTicket() {
-   
-    
-
+// function deleteTicket() {
+//     ticketList.length = 0;
+//     // console.log(ticketList);
+//     Save();
 // }
+// function deleteTicket(id){
+//     for(let i =0; i<ticketList.length; i++){
+//         if(ticketList[i].ID == id){
+//             ticketList.splice(i,1);
+//             Save();
 
-// function deleteTicket(id) {
-    
+//             return;
+//         }
+//     }
+
 // }
 
 // function editTicket(id) {
-   
+
 // }
 
-displayTicket();
+
+    
+
+
+    

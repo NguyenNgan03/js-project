@@ -113,9 +113,9 @@ function createTicketInfo() {
         TotalPrice: document.getElementById("total-price").value,
         PaymentMethod: document.getElementById("payment").value,
     };
+    alert("Your ticket has been successfully booked!");
     return ticketInfo;
 }
-
 function saveTicketToLocalStorage() {
     var ticketInfo = createTicketInfo();
     localStorage.setItem('ticketInfo', JSON.stringify(ticketInfo));
