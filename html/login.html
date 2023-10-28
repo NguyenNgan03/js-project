@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- ----------CSS/JS------------------ -->
     <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/auth.js"></script>
     
     <!-- ---------------BOOTSTRAP----------------- -->
-    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/jquery.min.js"> </script>
+    <!-- <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/jquery.min.js"> </script> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -17,11 +16,10 @@
     
 </head>
 <body>
-  <!-- -------------------------Nav------------------------ -->
-  <div id="wrapper">
+    <!-- -------------------------Nav------------------------ -->
     <div id="header">
         <div class="logo">
-            <img src="../image/Logo.png"  style="width: 50px; height: 50px;" />
+            <img src="../image/Logo.png" style="width: 50px; height: 50px;"/>
             <p> Book meseum tickets</p>
         </div>
         <div id="menu">
@@ -48,25 +46,28 @@
             <div class="item">
                 <i class="fa-solid fa-cart-shopping fa-xl"></i>
             </div>
+    
         </div>
     </div>
 
-  <!-- --------------------Login---------------------- -->
-
-  <form class="loginForm-hidden" action="./home.html" onsubmit="return validateLoginForm()">
-      <h1>Please log in</h1>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">User name</label>
-        <input type="text" placeholder="Enter user name" class="form-control" id="username">
-        <div id="usernameError" class="error"></div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" placeholder="Enter password" class="form-control" id="password">
-        <div id="passwordError" class="error"></div>
-      </div>
-      <button type="submit" class="btn-btn-primary">Login</button>
-      <h6><a href="signup.html">Signup</a> for new user</h6>
-  </form>
+    <!-- -------------------Form------------------------ -->
+    <form class="form" id="loginForm" novalidate>
+        <p class="title">Login</p>
+        <label>
+            <input required="" placeholder="UserName" type="text" class="input" id="username">
+            <div id="usernameError" class="error"></div>
+        </label>     
+        <label>
+            <input required="" placeholder="Password" type="password" class="input" id="password">
+            <div id="passwordError" class="error"></div>
+        </label>
+        <div class="links"> 
+            <a class="forgot" href="#">Forgot Password</a> 
+            <a class= "create" href="./signup.html">Create account</a>
+        </div> 
+        <button class="submit">Submit</button>
+    </form>
+    <script src="../js/login.js"></script>
+    <script src="../js/localStorage.js"></script>
 </body>
 </html>
