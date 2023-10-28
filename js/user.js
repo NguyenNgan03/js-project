@@ -1,117 +1,109 @@
-let users = [
-    { id: 1, userName: "Nhi", email: "nhi@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 2, userName: "Hoai", email: "hoai@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 3, userName: "Ngan", email: "ngan@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 4, userName: "Huyen", email: "huyen@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 5, userName: "Hung", email: "hung@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 6, userName: "Thu", email: "thu@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 7, userName: "Sang", email: "sang@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 8, userName: "Le", email: "le@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 9, userName: "Duyen", email: "duyen@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 10, userName: "Quyen", email: "quyen@gmail.com", password: "123456789", phone: "987654321" },
-    { id: 11, userName: "Hoanh", email: "hoanh@gmail.com", password: "123456789", phone: "987654321" }
-    
-];
-
-
-
 const userTable = document.getElementById("userTable");
 const addUserForm = document.getElementById("addUserForm");
-var id = 0;
-function displayUsers() {
- 
 
-  while(userTable.rows.length > 2) {
-    userTable.deleteRow(2);
-  }
-    users.forEach(user => {
-    
+function displayUsers() {
+  fetch("http://localhost:3000/user")
+    .then(response => response.json())
+    .then(users => {
+      // Xóa các dòng dữ liệu hiện tại trong bảng
+      while (userTable.rows.length > 2) {
+        userTable.deleteRow(2);
+      }
+
+      // Hiển thị thông tin của tất cả người dùng lên bảng
+      users.forEach((user, index) => {
         const row = userTable.insertRow();
 
         row.innerHTML = `
-            <td>${id++}</td>
-            <td>${user.userName}</td>
-            <td>${user.email}</td>
-            <td>${user.password}</td>
-            <td>${user.phone}</td>
-            <td>
-                <button onclick="editUser(${user.id})">Edit</button>
-                <button onclick="deleteUser(${user.id})">Delete</button>
-            </td>
+          <td>${user.id}</td>
+          <td>${user.username}</td>
+          <td>${user.email}</td>
+          <td>${user.password}</td>
+          <td>${user.phone}</td>
+          <td>
+            <button onclick="editUser(${user.id})">Edit</button>
+            <button onclick="deleteUser(${user.id})">Delete</button>
+          </td>
         `;
-    });
-    localStorage.setItem("listUser",JSON.stringify(users));
+      });
+    })
+    .catch(error => console.error("Error:", error));
 }
 
 function showAddUserForm() {
-    addUserForm.style.display = "block";
+  addUserForm.style.display = "block";
 }
 
 function hideAddUserForm() {
-    addUserForm.style.display = "none";
-    clearForm();
+  addUserForm.style.display = "none";
+  clearForm();
 }
 
 function clearForm() {
-    document.getElementById("userNameInput").value = "";
-    document.getElementById("emailInput").value = "";
-    document.getElementById("passwordInput").value = "";
-    document.getElementById("phoneInput").value = "";
-
-    document.getElementById("idInput").value = "";
+  document.getElementById("userNameInput").value = "";
+  document.getElementById("emailInput").value = "";
+  document.getElementById("passwordInput").value = "";
+  document.getElementById("phoneInput").value = "";
 }
 
-
 function addUser(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const userNameInput = document.getElementById("userNameInput");
-    const emailInput = document.getElementById("emailInput");
-    const passwordInput = document.getElementById("passwordInput");
-    const phoneInput = document.getElementById("phoneInput");
-    const idInput = document.getElementById("idInput");
+  const userNameInput = document.getElementById("userNameInput");
+  const emailInput = document.getElementById("emailInput");
+  const passwordInput = document.getElementById("passwordInput");
+  const phoneInput = document.getElementById("phoneInput");
 
-    const newUser = {
-        id: idInput || users.length + 1,
-        userName: userNameInput.value,
-        email: emailInput.value,
-        password: passwordInput.value,
-        phone: phoneInput.value
-    };
-    const userIndex = users.findIndex(user => user.id === Number(idInput.value));
-    const hasUser  =  userIndex !== -1
+  const newUser = {
+    username: userNameInput.value,
+    email: emailInput.value,
+    password: passwordInput.value,
+    phone: phoneInput.value
+  };
 
-    hasUser ? ( users[userIndex] = newUser) : users.push(newUser)
-
-    clearForm();
-    hideAddUserForm();
-    displayUsers();
+  fetch("http://localhost:3000/user", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newUser)
+  })
+    .then(response => response.json())
+    .then(() => {
+      clearForm();
+      hideAddUserForm();
+      displayUsers();
+    })
+    .catch(error => console.error("Error:", error));
 }
 
 function editUser(id) {
-    const user = users.find(user => user.id === id);
-    if (!user) return;
+  fetch(`http://localhost:3000/user/${id}`)
+    .then(response => response.json())
+    .then(user => {
+      const userNameInput = document.getElementById("userNameInput");
+      const emailInput = document.getElementById("emailInput");
+      const passwordInput = document.getElementById("passwordInput");
+      const phoneInput = document.getElementById("phoneInput");
 
-    const userNameInput = document.getElementById("userNameInput");
-    const emailInput = document.getElementById("emailInput");
-    const passwordInput = document.getElementById("passwordInput");
-    const phoneInput = document.getElementById("phoneInput");
-    const idInput = document.getElementById("idInput");
+      userNameInput.value = user.username;
+      emailInput.value = user.email;
+      passwordInput.value = user.password;
+      phoneInput.value = user.phone;
 
-    userNameInput.value = user.userName;
-    emailInput.value = user.email;
-    passwordInput.value = user.password;
-    phoneInput.value = user.phone;
-    idInput.value = user.id;
-
-    showAddUserForm();
+      showAddUserForm();
+    })
+    .catch(error => console.error("Error:", error));
 }
 
 function deleteUser(id) {
-    users = users.filter(user => user.id !== id);
-    displayUsers();
+  fetch(`http://localhost:3000/user/${id}`, {
+    method: "DELETE"
+  })
+    .then(() => {
+      displayUsers();
+    })
+    .catch(error => console.error("Error:", error));
 }
 
 displayUsers();
-
-

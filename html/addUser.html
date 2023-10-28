@@ -71,54 +71,56 @@
   <div class="content">
       <table class="table" id="userTable">
         <header>
-          <div class="header-content">
-              <label for="menu-toggle">
-                  <span class="fa-solid fa-bars"></span>
-              </label>
-              <div class="header-menu">
-                  <label for="">
-                      <span class="fa-solid fa-search"></span>
-                  </label>
-                  <div class="notify-icon">
-                      <span class="fa-solid fa-bell"></span>
-                      <span class="notify">3</span>
-                  </div>
-                  <div class="user">
-                      <div class="bg-img" style="background-image: url(../image/1.jpeg)"></div>
-                  </div>
-              </div>
-          </div>
-        <tr>
-            <th>User</th>
-            <th colspan="5"><button class="add-user-btn" onclick="showAddUserForm()">Add User</button></th>
-        </tr>
-        <tr>
-            <td>Id</td>
-            <td>User Name</td>
-            <td>Email</td>
-            <td>Password</td>
-            <td>Phone</td>
-            <td>Action</td>
-        </tr>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="fa-solid fa-bars"></span>
+                </label>
+                <div class="header-menu">
+                    <label for="">
+                        <span class="fa-solid fa-search"></span>
+                    </label>
+                    <div class="notify-icon">
+                        <span class="fa-solid fa-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(../image/1.jpeg)"></div>
+                    </div>
+                </div>
+            </div>
+            <tr>
+                <th>User</th>
+                <th colspan="5"><button class="add-user-btn" onclick="showAddUserForm()">Add User</button></th>
+            </tr>
+            <tr>
+                <td>Id</td>
+                <td>User Name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Phone</td>
+                <td>Action</td>
+            </tr>
         </header>
         <tbody id="tbody">
                   
         </tbody>
     </table>
+    <script src="../json_server/db.json"></script>
+    <script src="../js/user.js"></script>
+
 
     <div id="addUserForm" style="display: none;">
       <h2>Add User</h2>
       <form id="userForm" onsubmit="addUser(event)">
-          <input type="text" id="userNameInput" placeholder="User Name" required>
-          <input type="email" id="emailInput" placeholder="Email" required>
-          <input type="password" id="passwordInput" placeholder="Password" required>
-          <input type="tel" id="phoneInput" placeholder="Phone" required>
-          <input  id="idInput" type="hidden">
-          <button type="submit">Save</button>
-          <button type="button" onclick="hideAddUserForm()">Cancel</button>
+        <input type="text" id="userNameInput" placeholder="User Name" required>
+        <input type="email" id="emailInput" placeholder="Email" required>
+        <input type="password" id="passwordInput" placeholder="Password" required>
+        <input type="tel" id="phoneInput" placeholder="Phone" required>
+        <input id="idInput" type="hidden" value="">
+        <button type="submit">Save</button>
+        <button type="button" onclick="hideAddUserForm()">Cancel</button>
       </form>
     </div>
-    <script src="../js/user.js"></script>
   </div>
 </body>
 </html>

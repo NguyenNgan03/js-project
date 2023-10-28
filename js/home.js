@@ -63,7 +63,43 @@ const product2 = [{
   categoryType: 2,
 }]
 
+fetch('http://localhost:3000/product1').then(response => response.json())
+.then(data => {
+  console.log(data); // This will print the data from data.json
+})
+.catch(function(error) {
+    console.log(error);
+    // Xử lý lỗi nếu có
+    alert('An error occurred while registering the user.');
+  });
+  // fetch('http://localhost:3000/user/', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  // })
 
+function checkAPI(){
+  fetch('http://localhost:3000/product1/1',{method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: 'Ho Chi Minh Museum',
+    imgSrc: '../image/9.jpg',
+    price: '200.000',
+    location: '19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,<br>',
+    categoryType: 2,
+  })} )
+.then(data => {
+  console.log(data); // This will print the data from data.json
+})
+.catch(function(error) {
+    console.log(error);
+    // Xử lý lỗi nếu có
+    alert('An error occurred while registering the user.');
+  });
+}
 const getProductByCategory = (categoryType = 1) => {
   const filteredProds =product1.filter((prod)=>prod.categoryType === categoryType)
   let elementCategory = document.getElementById(`category_${categoryType}`);

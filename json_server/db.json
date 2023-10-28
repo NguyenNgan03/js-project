@@ -1,0 +1,49 @@
+{
+  "user": [
+    {
+      "username": "Nhi",
+      "email": "nhi@gmail.com",
+      "phone": "0987654321",
+      "password": "0999",
+      "id": 8
+    },
+    {
+      "username": "Na",
+      "email": "na.ksor@gmail.com",
+      "phone": "0987654321",
+      "password": "0888",
+      "id": 10
+    },
+    {
+      "username": "Thư",
+      "email": "thu@gmail.com",
+      "phone": "123456789",
+      "password": "098",
+      "id": 11
+    },
+    {
+      "username": "Huyen",
+      "email": "huyen@gmail.com",
+      "phone": "0987654321",
+      "password": "0987",
+      "id": 12
+    },
+    {
+      "username": "Hoanh",
+      "email": "hoanhho@gmail.com",
+      "phone": "0332594284",
+      "password": "09876",
+      "id": 13
+    }
+  ],
+  "product1": [
+    {
+      "name": "Ho Chi Minh Museum",
+      "imgSrc": "../image/9.jpg",
+      "price": "200.000",
+      "location": "19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,<br>",
+      "categoryType": 2,
+      "id": 1
+    }
+  ]
+}
