@@ -1,39 +1,25 @@
 {
   "user": [
     {
-      "username": "Nhi",
-      "email": "nhi@gmail.com",
-      "phone": "0987654321",
-      "password": "0999",
-      "id": 8
-    },
-    {
-      "username": "Na",
-      "email": "na.ksor@gmail.com",
-      "phone": "0987654321",
-      "password": "0888",
-      "id": 10
-    },
-    {
-      "username": "Thư",
-      "email": "thu@gmail.com",
-      "phone": "123456789",
-      "password": "098",
-      "id": 11
-    },
-    {
-      "username": "Huyen",
+      "username": "Huye",
       "email": "huyen@gmail.com",
-      "phone": "0987654321",
-      "password": "0987",
-      "id": 12
+      "password": "098",
+      "phone": "234567891",
+      "id": 13
     },
     {
-      "username": "Hoanh",
-      "email": "hoanhho@gmail.com",
-      "phone": "0332594284",
-      "password": "09876",
-      "id": 13
+      "username": "Th",
+      "email": "thu@gmail.com",
+      "password": "0000",
+      "phone": "123456789",
+      "id": 14
+    },
+    {
+      "username": "Duyen",
+      "email": "duyen@gmail.com",
+      "phone": "232463792",
+      "password": "9999",
+      "id": 15
     }
   ],
   "product1": [
