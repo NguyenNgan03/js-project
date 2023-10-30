@@ -1,19 +1,17 @@
+
 const userTable = document.getElementById("userTable");
 const addUserForm = document.getElementById("addUserForm");
+const apiUrl = "http://localhost:3000/user";
 
 function displayUsers() {
-  fetch("http://localhost:3000/user")
+  fetch(apiUrl)
     .then(response => response.json())
     .then(users => {
-      // Xóa các dòng dữ liệu hiện tại trong bảng
       while (userTable.rows.length > 2) {
         userTable.deleteRow(2);
       }
-
-      // Hiển thị thông tin của tất cả người dùng lên bảng
-      users.forEach((user, index) => {
+      users.forEach(user => {
         const row = userTable.insertRow();
-
         row.innerHTML = `
           <td>${user.id}</td>
           <td>${user.username}</td>
@@ -21,13 +19,15 @@ function displayUsers() {
           <td>${user.password}</td>
           <td>${user.phone}</td>
           <td>
-            <button onclick="editUser(${user.id})">Edit</button>
-            <button onclick="deleteUser(${user.id})">Delete</button>
+              <button onclick="editUser(${user.id})">Edit</button>
+              <button onclick="deleteUser(${user.id})">Delete</button>
           </td>
-        `;
+      `;
       });
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+      console.error("Lỗi khi lấy danh sách người dùng:", error);
+    });
 }
 
 function showAddUserForm() {
@@ -44,6 +44,7 @@ function clearForm() {
   document.getElementById("emailInput").value = "";
   document.getElementById("passwordInput").value = "";
   document.getElementById("phoneInput").value = "";
+  document.getElementById("idInput").value = "";
 }
 
 function addUser(event) {
@@ -53,57 +54,94 @@ function addUser(event) {
   const emailInput = document.getElementById("emailInput");
   const passwordInput = document.getElementById("passwordInput");
   const phoneInput = document.getElementById("phoneInput");
+  const idInput = document.getElementById("idInput");
 
   const newUser = {
     username: userNameInput.value,
     email: emailInput.value,
     password: passwordInput.value,
-    phone: phoneInput.value
+    phone: phoneInput.value,
   };
 
-  fetch("http://localhost:3000/user", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(newUser)
-  })
-    .then(response => response.json())
-    .then(() => {
-      clearForm();
-      hideAddUserForm();
-      displayUsers();
+  if (idInput.value) {
+    // Edit existing user
+    const url = `${apiUrl}/${idInput.value}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
     })
-    .catch(error => console.error("Error:", error));
+      .then(response => response.json())
+      .then(user => {
+        console.log("Người dùng đã được sửa:", user);
+        clearForm();
+        hideAddUserForm();
+        displayUsers();
+      })
+      .catch(error => {
+        console.error("Lỗi khi sửa người dùng:", error);
+      });
+  } else {
+    // Add new user
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then(response => response.json())
+      .then(user => {
+        console.log("Người dùng đã được thêm:", user);
+        clearForm();
+        hideAddUserForm();
+        displayUsers();
+      })
+      .catch(error => {
+        console.error("Lỗi khi thêm người dùng:", error);
+      });
+  }
 }
 
 function editUser(id) {
-  fetch(`http://localhost:3000/user/${id}`)
+  const url = `${apiUrl}/${id}`;
+  fetch(url)
     .then(response => response.json())
     .then(user => {
       const userNameInput = document.getElementById("userNameInput");
       const emailInput = document.getElementById("emailInput");
       const passwordInput = document.getElementById("passwordInput");
       const phoneInput = document.getElementById("phoneInput");
+      const idInput = document.getElementById("idInput");
 
       userNameInput.value = user.username;
       emailInput.value = user.email;
       passwordInput.value = user.password;
       phoneInput.value = user.phone;
+      idInput.value = user.id;
 
       showAddUserForm();
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+      console.error("Lỗi khi lấy thông tin người dùng:", error);
+    });
 }
 
 function deleteUser(id) {
-  fetch(`http://localhost:3000/user/${id}`, {
-    method: "DELETE"
+  const url = `${apiUrl}/${id}`;
+  fetch(url, {
+    method: "DELETE",
   })
-    .then(() => {
+    .then(response => {
+      response.data;
+      console.log("Người dùng đã bị xóa");
       displayUsers();
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+      console.error("Lỗi khi xóa người dùng:", error);
+    });
 }
 
 displayUsers();
