@@ -1,3 +1,4 @@
+// import { getDataFromLocalStore, setDataToLocalStor, addObjDataToLocalStore } from './localStorage.js';
 function total(){
     var totalTicket = document.getElementById("quantity-ticket").value;
     var priceTicket = document.getElementById("price").textContent;
@@ -16,8 +17,8 @@ function total(){
 }
 
 
+// let ticketList = getDataFromLocalStore("ticketList", []);
 let ticketList = load() || [];
-
 function load(){
     return JSON.parse(localStorage.getItem("ticketList"));
 }
@@ -43,8 +44,6 @@ function displayTicket() {
             <td> ${ticket.paymentMethod} </td>
             <td> </td>
             <td> <button onclick="deleteTicket(${ticket.ID})">Delete</button> </td>
-            
-           
             </tr>
         `;
     });
@@ -53,6 +52,7 @@ function displayTicket() {
 }
 
 function createTicketInfo(){
+
     console.log("Button clicked");
     const museumName = document.getElementById("msu-name").textContent;
     const customerName = document.getElementById("name").value;
@@ -93,7 +93,7 @@ function createTicketInfo(){
         alert("Invalid total price.");
         return;
     }
-    
+
     const newTicket = {
         ID: ticketList.length + 1, 
         museumName: museumName,
@@ -108,18 +108,11 @@ function createTicketInfo(){
     }
 
     ticketList.push(newTicket);
-    Save();
+    // setDataToLocalStore("ticketList", ticketList);
+    Save()
+    
     alert("bạn đã book vé thành công");
-    document.getElementById("name").value = "";
-    document.getElementById("birthdate").value = "";
-    document.getElementById("address").value = "";
-    document.getElementById("quantity-ticket").value = "";
-    document.getElementById("date").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("total-price").value = "";
-    document.getElementById("payment").value = "card";
-   
+
 }
 
 // function deleteTicket() {
