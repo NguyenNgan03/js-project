@@ -130,4 +130,16 @@
       
       
     }
+
+
+    .addProductForm{
+      width: 84%;
+      border: 1px solid black;
+      border-radius: 10px ;
+      margin-left: 220px;
+      background-color: #4CAF50;
+    }
+    .addProductForm input{
+      border: none;
+    }
     
