@@ -20,6 +20,27 @@
       "phone": "232463792",
       "password": "9999",
       "id": 15
+    },
+    {
+      "username": "hoai ",
+      "email": "hoai@gmail.com",
+      "phone": "098765",
+      "password": "12345",
+      "id": 16
+    },
+    {
+      "username": "Nguyen Hoai",
+      "email": "eunwoo565@gmail.com",
+      "phone": "0945824007",
+      "password": "Hoai1234",
+      "id": 17
+    },
+    {
+      "username": "ng",
+      "email": "hoai.nguyen25@student.passerellesnumeriques.org",
+      "phone": "09",
+      "password": "12345",
+      "id": 18
     }
   ],
   "product1": [
