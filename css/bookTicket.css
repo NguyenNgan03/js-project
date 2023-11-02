@@ -92,8 +92,6 @@
 /* form */
 body {
     background-color: #f0f0f0;
-    padding: 20px;
-
 }
 
 .museum-card {
@@ -108,15 +106,29 @@ body {
     margin-right: 20px;
 }
 
+.frm{
+    display: flex;
+    justify-content: center;
+}
+
+.div-with-margin{
+    margin-right: 20px;
+}
+.div-with-margin2{
+    margin-left: 30px;
+}
+
 
 
 .booking-form {
-    max-width: 400px;
+    max-width: 1000px;
+    max-height: 450px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f5f5;
     border-radius: 5px;
     box-shadow: 0 0 10px #f6dd55;
+    margin-bottom: 30px;
 }
 
 .booking-form label {
