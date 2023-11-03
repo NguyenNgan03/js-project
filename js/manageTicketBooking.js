@@ -2,18 +2,8 @@
 function total(){
     var totalTicket = document.getElementById("quantity-ticket").value;
     var priceTicket = document.getElementById("price").textContent;
-    var totalPriceElement = document.getElementById("total-price");
-
-    if (!isNaN(totalTicket)) {
-        var total = Number(totalTicket) * Number(priceTicket); 
-        document.getElementById("total-price").value = total;
-        console.log(totalTicket,priceTicket)
-        document.getElementById("total-price").innerHTML = total;
-        totalPriceElement.value = total;
-    } else {
-        document.getElementById("total-price").value = "Nhập sai thông tin vé hoặc giá vé";
-    }
-    
+    var totalPriceElement = Number(totalTicket) * Number(priceTicket);
+    return totalPriceElement;
 }
 
 
@@ -61,7 +51,7 @@ function createTicketInfo(){
     const date = document.getElementById("date").value;
     const phone = document.getElementById("phone").value;
     const email = document.getElementById("email").value;
-    const totalPrice = document.getElementById("total-price").value;
+    const totalPrice = total();
     const paymentMethod = document.getElementById("payment").value;
 
     if (customerName.trim() === "") {
@@ -108,12 +98,18 @@ function createTicketInfo(){
     }
 
     ticketList.push(newTicket);
+    
     // setDataToLocalStore("ticketList", ticketList);
     Save()
+    document.getElementById("booking").innerHTML = 
+    `<h3> Xin chào ${customerName} </h3>
+    <h4> Bạn đã đặt ${quantity} vé đi ${museumName} </h4>
+    <h4> Tổng thanh toán là ${total()} VNĐ</h4>
+    `;
     
-    alert("bạn đã book vé thành công");
+   
 
-}
+}   
 
 // function deleteTicket() {
 //     ticketList.length = 0;
