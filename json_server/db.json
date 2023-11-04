@@ -15,6 +15,7 @@
       "id": 15
     },
     {
+
       "username": "Hue",
       "email": "hue@gmail.com",
       "phone": "0987654321",
@@ -328,6 +329,7 @@
       "phone": "0987654321",
       "password": "123",
       "id": 63
+
     }
   ],
   "product1": [
@@ -338,6 +340,65 @@
       "location": "19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,<br>",
       "categoryType": 2,
       "id": 1
+    },
+    {
+      "productName": "hai",
+      "quantity": "2",
+      "price": "12",
+      "discount": "30%",
+      "location": "Da Nang",
+      "id": 2
+    },
+    {
+      "productName": "hai",
+      "quantity": "2",
+      "price": "12",
+      "discount": "30%",
+      "location": "Da Nang",
+      "id": 3
+    },
+    {
+      "productName": "hai",
+      "quantity": "2",
+      "price": "12",
+      "discount": "30%",
+      "location": "Da Nang",
+      "id": 4
+    },
+    {
+      "productName": "hai",
+      "quantity": "2",
+      "price": "12",
+      "discount": "30%",
+      "location": "Da Nang",
+      "id": 5
+    },
+    {
+      "productName": "hai",
+      "quantity": "2",
+      "price": "12",
+      "discount": "30%",
+      "location": "Da Nang",
+      "id": 6
+    },
+    {
+      "productName": "hai",
+      "quantity": "2",
+      "price": "12",
+      "discount": "30%",
+      "location": "Da Nang",
+      "id": 7
+    },
+    {
+      "productName": "hai",
+      "quantity": "2",
+      "price": "12",
+      "discount": "30%",
+      "location": "Da Nang",
+      "id": 8
     }
-  ]
+  ],
+  "product2": [{
+    
+  }]
 }
