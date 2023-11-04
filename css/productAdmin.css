@@ -50,10 +50,14 @@
   border-radius: 2px;
   background-color: gray;
 }
-/* table */
-#table{
-  width: 84%;
-  border: 1px solid black;
-  border-radius: 10px ;
-  margin-left: 220px;
+
+/* form addProduct */
+#addProductForm {
+  width: 80%;
+  margin-left: 250px;
+
+}
+#thanhMenu{
+  width: 200%;
+  background-color: #4CAF50;
 }
