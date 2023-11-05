@@ -119,7 +119,7 @@ function editProduct(id) {
       const quantityInput = document.getElementById("quantityInput");
       const priceInput = document.getElementById("priceInput");
       const discountInput = document.getElementById("discountInput");
-      const   locationInput = document.getElementById("locationInput ");
+      const locationInput = document.getElementById("locationInput ");
       const idInput = document.getElementById("idInput");
 
       productNameInput.value = product1.productName;

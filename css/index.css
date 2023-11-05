@@ -1,0 +1,140 @@
+.card-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product-imgs {
+    width: 80%;
+    height: 100%;
+
+}
+img{
+    width: 112px;
+    height: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 90%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 112%;
+    height: 500px;
+
+}
+.img-select{
+    display: flex;
+    margin-top: 5px;
+
+
+}
+.img-item{
+    padding-right: 7px;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+
+/* --- card right --- */
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    color: black;
+    margin: 30px 0px;
+}
+
+.product-title{
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: black;
+}
+.product-price{
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.old-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.product-rating span{
+    color: red;
+} 
+
+/* ------------ */
+.purchase-info{
+    margin: 1.5rem 0;
+}
+
+.purchase-info input,
+.purchase-info .btn{
+    border: 2px solid rgb(211, 140, 8);
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px;
+    margin-right: 30px;
+}
+.purchase-info input{
+    width: 60px;
+}
+.purchase-info .btn{
+    color: #fff;
+}
+.purchase-info .btn {
+    background: rgb(211, 140, 8);
+}
+.purchase-info .btn:hover{
+    opacity: 0.9;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.title p{
+    display: inline;
+    margin-right: 20px;
+    font-weight: 600;
+
+}
+p {
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}
