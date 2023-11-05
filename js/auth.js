@@ -1,6 +1,7 @@
 document.getElementById("registerForm").addEventListener('submit', function(event) {
-  event.preventDefault(); // Ngăn chặn gửi form mặc định
-
+  event.preventDefault()
+  event.stopPropagation()
+  event.stopImmediatePropagation()
   // Kiểm tra các trường nhập liệu
   var usernameInput = document.getElementById('username');
   var emailInput = document.getElementById('email');
@@ -102,29 +103,60 @@ document.getElementById("registerForm").addEventListener('submit', function(even
     password: passwordInput.value
   };
 
-  // Gửi yêu cầu POST đến JSON Server
-  fetch('http://localhost:3000/user', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(user)
-  }).then(function(response) {
+  // Hàm kiểm tra địa chỉ email đã tồn tại hay chưa
+  function checkExistingEmail(email) {
+    return fetch('http://localhost:3000/user?email=' + email)
+      .then(function(response) {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Do you already have an account');
+        }
+      })
+      .then(function(data) {
+        return data.length > 0; // Trả về true nếu địa chỉ email đã tồn tại
+      })
+  }
 
-    if (response.ok) {
-      // Nếu không có lỗi, hiển thị thông báo đăng ký thành công
-      alert('Registration successful!');
-      
-      window.open("../html/home.html");
-      
-    } else {
-      throw new Error('An error occurred while registering the user.');
+    // checkExistingEmail(emailInput.value)
+
+    const postUser = () => {
+      // Gửi yêu cầu POST đến JSON Server
+        fetch('http://localhost:3000/user', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(user)
+        }).then(function(response) {
+          console.log(response)
+          if (response.ok) {
+
+            // Nếu không có lỗi, hiển thị thông báo đăng ký thành công
+            alert('Registration successful!');
+            
+
+          } else {
+            throw new Error('An error occurred while registering the user.');
+          }
+        })
     }
-  }).catch(function(error) {
-    console.log(error);
-    // Xử lý lỗi nếu có
-    alert('An error occurred while registering the user.');
-  });
+
+  // Kiểm tra xem địa chỉ email đã tồn tại hay chưa
+  checkExistingEmail(emailInput.value)
+    .then(function(existingEmail) {
+      if (existingEmail) {
+        emailError.textContent = 'An account with this email already exists. Please log in.';
+        emailInput.addEventListener('input', function() {
+          emailError.textContent = '';
+        });
+        emailInput.focus();
+        return;
+      } else {
+        postUser()
+          window.location.assign("../html/home.html")
+      }
+    })
 });
 
 // Hàm kiểm tra định dạng email

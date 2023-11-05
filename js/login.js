@@ -1,7 +1,7 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Ngăn chặn gửi form mặc định
 
-  // Kiểm tra các trường nhập liệu
+  // Lấy giá trị từ ô input
   var usernameInput = document.getElementById('username');
   var passwordInput = document.getElementById('password');
 
@@ -60,12 +60,14 @@ function authenticateUser(user) {
       });
 
       if (foundUser) {
-        // Xác thực thành công, thực hiện các hành động sau đăng nhập
-        alert('Login successful!'); // Thay bằng hành động mong muốn sau đăng nhập
+        // Lưu thông tin đăng nhập vào Local Storage
+        localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
+      
+        alert('Login successful!'); // Thông báo thành công
         window.location.href = '../html/home.html';
       } else {
-        // Xác thực thất bại, hiển thị thông báo lỗi
-        alert('Invalid username or password. Try again or create account'); // Thay bằng thông báo lỗi mong muốn
+        // Hiển thị thông báo lỗi
+        alert('Invalid username or password. Try again or create an account');
       }
     })
     .catch(error => {
