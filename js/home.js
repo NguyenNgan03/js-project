@@ -65,7 +65,7 @@ const product2 = [{
 
 fetch('http://localhost:3000/product1').then(response => response.json())
 .then(data => {
-  console.log(data); // This will print the data from data.json
+  console.log(data); // This print the data from data.json
 })
 .catch(function(error) {
     console.log(error);
