@@ -107,7 +107,7 @@ for(let i=0; i<filteredProds.length; i++){
             <p class="card-text">${filteredProds[i].desc}</p>
             <br>
             <div class="text-end">
-              <a href="detail.html?id=${filteredProds[i].id}" class="btn btn-primary">Booking </a>
+              <a href="../html/index.html?id=${filteredProds[i].id}" class="btn btn-primary">Booking </a>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ for(let i=0; i<filteredProds.length; i++){
             <i class="fa-solid fa-dollar-sign" style="color: #FFC300;"></i> ${filteredProds[i].price}
             <div class="text-end">
               <br>
-              <a href="detail.html?id=${filteredProds[i].id}" class="btn btn-primary">Booking </a>
+              <a href="../html/index.html?id=${filteredProds[i].id}" class="btn btn-primary">Booking </a>
             </div>
           </div>
         </div>
