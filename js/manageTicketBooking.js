@@ -53,7 +53,7 @@ function createTicketInfo(){
     localStorage.setItem("mail", JSON.stringify(email));
     const totalPrice = total();
     const paymentMethod = document.getElementById("payment").value;
-    message = "Bạn đã đặt "+quantity+" vé đi "+ museumName+"\nTổng thanh toán là "+totalPrice+" VNĐ";
+    message = "Chào "+ customerName + ", " + "Bạn đã đặt "+quantity+" vé đi "+ museumName+"\nTổng thanh toán là "+totalPrice+" VNĐ";
     if (customerName.trim() === "") {
         alert("Please enter a customer name.");
         return;
@@ -100,7 +100,7 @@ function createTicketInfo(){
     ticketList.push(newTicket);
     
     // setDataToLocalStore("ticketList", ticketList);
-    Save()
+    
     document.getElementById("booking").innerHTML = 
     `<h3> Xin chào ${customerName} </h3>
     <h4> Bạn đã đặt ${quantity} vé đi ${museumName} </h4>
@@ -119,6 +119,8 @@ function sendMail(){
     }, (err) => {
       alert(JSON.stringify(err));
     });
+    Save()
+    
 }
 
 // function deleteTicket() {
