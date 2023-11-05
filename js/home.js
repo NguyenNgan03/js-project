@@ -38,7 +38,7 @@ const product2 = [{
   name: 'War Remnants Museum',
   imgSrc: '../image/6.jpg',
   price: '150.000',
-  location: '28 Đ. Võ Văn Tần, Võ Thị Sáu, TP.Hồ Chí Minh<br>',
+  location: '28 Đ. Võ Văn Tần, Võ Thị Sáu, TP.Hồ Chí Minh',
   categoryType: 2,
 }, {
   id: '6',
