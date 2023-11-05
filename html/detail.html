@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <!-- Bootstrap 5 CSS -->
-    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/jquery.min.js"> </script>
+    <!-- <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/jquery.min.js"> </script> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/detail.css">
-    <script src="../js/login-signup.js"></script> 
+    <!-- <script src="../js/login-signup.js"></script>  -->
 </head>
 <body>
     <div id="wrapper">
@@ -28,8 +28,8 @@
                     <a href="">Booking</a>
                 </div>
                 <div class="item">
-                    <a href="../html/index.html">Detail</a>
-                </div>
+                    <a href="">Detail</a>
+                </div>  
                 <div class="item">
                     <a href="">Contact Us</a>
                 </div>
@@ -45,86 +45,21 @@
         </div>
     </div>
 
-    <div class = "card-wrapper">
-        <div class = "card">
-            <!-- card left -->
-            <div class = "product-imgs">
-                <div class = "img-display">
-                    <h1>BẢO TÀNG ĐIỀU KHẮC</h1>
-                    <div class = "img-showcase">
-                        <img src = "../image/Rectangle 451.png" alt = "shoe image">
-                        <img src = "../image/Rectangle 455.png" alt = "shoe image">
-                        <img src = "../image/Rectangle 457.png" alt = "shoe image">
-                        <img src = "../image/Rectangle 458.png" alt = "shoe image">
-                    </div>
-                </div>
-                <div class = "img-select">
-                    <div class = "img-item">
-                        <a href = "#" data-id = "1">
-                        <img src = "../image/Rectangle 451.png" alt = "shoe image">
-                        </a>
-                    </div>
-                    <div class = "img-item">
-                        <a href = "#" data-id = "2">
-                        <img src = "../image/Rectangle 455.png" alt = "shoe image">
-                        </a>
-                    </div>
-                    <div class = "img-item">
-                        <a href = "#" data-id = "3">
-                        <img src = "../image/Rectangle 457.png" alt = "shoe image">
-                        </a>
-                    </div>
-                    <div class = "img-item">
-                        <a href = "#" data-id = "4">
-                        <img src = "../image/Rectangle 458.png" alt = "shoe image">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- card right -->
-            <div class = "product-content">
-                <a href = "#" class = "product-title">Bảo tàng Chăm là bảo tàng điêu khắc nằm ở thành phố Đà Nẵng, Việt Nam</a>
-                <div class = "product-price">
-                    <p class="old-price"> Old price: <span>$257.00</span></p>
-                    <p class="new-price"> New price: <span>$249.00 (5%)</span></p>
-                    <p><i class="fa fa-clock"></i>Tình trạng: <span>Đang mở cửa</span></p>
-                        <div class = "product-rating">
-                            <p><i class="fa fa fa-check-circle"></i> Đánh giá: 
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                                <i class = "fas fa-star-half-alt" style="color: yellow;"></i>
-                                <span>4.7 (21)</span>
-                            </p>
-                        </div>
-                    <p><i class="fa fa-map-marker-alt"></i> Địa chỉ: <span>123 Đường ABC, Thành phố XYZ</span></p>
-                    <p><i class="fa fa-phone"></i> Hotline: <span>123-456-789</span></p>
-                </div>
-                <div>
-                    <div class="title">
-                        <p>Description</p>
-                        <p>Description</p>
-                        <p>Description</p>
-                    </div>
-                    <p>Bảo tàng Chăm không chỉ là nơi trưng bày các sản phẩm nghệ thuật Chăm mà còn là một trung tâm nghiên cứu và bảo tồn văn hóa Chăm. Bảo tàng cung cấp một môi trường học tập và tiếp cận cho những người quan tâm đến nền văn hóa và lịch sử của người Chăm.
-                    </p>
-                </div>
-                <div class="purchase-info">
-                    <input type = "number" min = "0" value = "1">
-                        <a href="#">
-                            <button type = "button" class = "btn"> Thêm vào giỏ hàng</button>
-                        </a>
-                      <a href="../html/bookTicket.html">
-                        <button type = "button" class = "btn"> Đặt vé </button>
-                      </a>
-                    </input>
-                </div>
-            </div>
-        </div>
-    </div> 
+    <!-- Danh sách sản phẩm -->
+    <div class="product-list">
+    <!-- Đổ dữ liệu sản phẩm từ file data.json -->
+    </div>
+
+    <!-- Trang chi tiết sản phẩm -->
+    <!-- <div id="product-container"></div> -->
+    <!-- <div class="product-detail-content">
+        <h2 id="product-detail-name"></h2>
+        <img id="product-detail-image" src="" alt="Product Image">
+        <p id="product-detail-price"></p>
+        <p id="product-detail-location"></p>
+        </div> -->
     <script src="../js/detail.js"></script>
 </body>
 </html>
 
-   
+ 

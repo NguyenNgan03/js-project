@@ -72,12 +72,6 @@ fetch('http://localhost:3000/product1').then(response => response.json())
     // Xử lý lỗi nếu có
     alert('An error occurred while registering the user.');
   });
-  // fetch('http://localhost:3000/user/', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  // })
 
 function checkAPI(){
   fetch('http://localhost:3000/product1/1',{method: 'PUT',

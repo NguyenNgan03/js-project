@@ -337,68 +337,88 @@
       "name": "Ho Chi Minh Museum",
       "imgSrc": "../image/9.jpg",
       "price": "200.000",
-      "location": "19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,<br>",
+      "location": "19 Ngọc Hà, Ba Đình, Hà Nội",
       "categoryType": 2,
       "id": 1
-    },
-    {
-      "productName": "hai",
-      "quantity": "2",
-      "price": "12",
-      "discount": "30%",
-      "location": "Da Nang",
+    },{
+      "name": "VietNam Museum of History",
+      "imgSrc": "../image/7.jpg",
+      "price": "200.000",
+      "location": "216 Tràng Tiền, Hà Nội",
+      "categoryType": 2,
       "id": 2
-    },
-    {
-      "productName": "hai",
-      "quantity": "2",
-      "price": "12",
-      "discount": "30%",
-      "location": "Da Nang",
+    }, {
+ 
+      "name": "Thanh Ha Terracotta Park",
+      "imgSrc": "../image/8.jpg",
+      "price": "120.000",
+      "location": "Phạm Phán, Hội An, Quảng Nam",
+      "categoryType": 2,
       "id": 3
-    },
-    {
-      "productName": "hai",
-      "quantity": "2",
-      "price": "12",
-      "discount": "30%",
-      "location": "Da Nang",
+    }, {
+      "name": "Ho Chi Minh Museum",
+      "imgSrc": "../image/9.jpg",
+      "price": "200.000",
+      "location": "19 Ngọc Hà, Ba Đình, Hà Nội",
+      "categoryType": 2,
       "id": 4
-    },
-    {
-      "productName": "hai",
-      "quantity": "2",
-      "price": "12",
-      "discount": "30%",
-      "location": "Da Nang",
+
+    }, {
+      "name": "Museum of cham sculptur",
+      "imgSrc": "../image/1.jpg",
+      "price": "150.000",
+      "location": "Hải Châu District, Đà Nẵng",
+      "categoryType": 2,
       "id": 5
-    },
-    {
-      "productName": "hai",
-      "quantity": "2",
-      "price": "12",
-      "discount": "30%",
-      "location": "Da Nang",
+    }, {
+      "name": "Museum of military zone 5",
+      "imgSrc": "../image/2.jpg",
+      "price": "200.000",
+      "location": "3 Duy Tân, Đà Nẵng",
+      "categoryType": 2,
       "id": 6
-    },
-    {
-      "productName": "hai",
-      "quantity": "2",
-      "price": "12",
-      "discount": "30%",
-      "location": "Da Nang",
+    }, {
+      "name": "Da Nang fine arts museum",
+      "imgSrc": "../image/3.jpg",
+      "price":"120.000",
+      "location": "78 Lê Duẩn, Hải Châu, Đà Nẵng",
+      "categoryType": 2,
       "id": 7
-    },
-    {
-      "productName": "hai",
-      "quantity": "2",
-      "price": "12",
-      "discount": "30%",
-      "location": "Da Nang",
+    }, {
+      "name": "3D Museum Art",
+      "imgSrc": "../image/4.jpg",
+      "price": "200.000",
+      "location": "Trần Nhân Tông, Sơn Trà, Đà Nẵng",
+      "categoryType": 2,
       "id": 8
+    }, {
+      "name": "Museum of cham sculptur",
+      "imgSrc": "../image/5.jpg",
+      "price": "150.000",
+      "location": "Hải Châu District, Đà Nẵng",
+      "categoryType": 2,
+      "id": 9
+    }, {
+      "name": "Museum of military zone 5",
+      "imgSrc": "../image/10.jpg",
+      "price": "200.000",
+      "location": "3 Duy Tân, Đà Nẵng",
+      "categoryType": 2,
+      "id": 10
+    }, {
+      "name": "Da Nang fine arts museum",
+      "imgSrc": "../image/12.jpg",
+      "price":"120.000",
+      "location": "78 Lê Duẩn, Hải Châu, Đà Nẵng",
+      "categoryType": 2,
+      "id": 11
+    }, {
+      "name": "3D Museum Art",
+      "imgSrc": "../image/13.jpg",
+      "price": "200.000",
+      "location": "Trần Nhân Tông, Sơn Trà, Đà Nẵng",
+      "categoryType": 2,
+      "id": 12
     }
-  ],
-  "product2": [{
-    
-  }]
+  ]
 }
