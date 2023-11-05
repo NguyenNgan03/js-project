@@ -1,0 +1,166 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+}
+#header {
+    padding: 2px 20px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    background-color: black;
+    color: white;
+}
+
+#menu .item a:hover{
+    color: yellow;
+}
+#header .logo {
+    display: flex;
+    margin-top: 10px;
+}
+#header .logo p {
+    margin-left: 20px;
+    margin-top: 16px;
+}
+#menu {
+    list-style:none;
+    display: flex;
+}
+
+#menu .item {
+    margin:0px 25px;
+}
+
+#menu .item a {
+    color: white;
+    text-decoration: none;
+}
+
+#icon {
+    display: flex;
+}
+
+#icon .item {
+    margin-left:22px;
+    width:20px;
+    height: 20px;
+}
+
+#banner {
+    display: flex;
+    position: relative;
+}
+
+#banner .carousel-item h2 {
+    font-size:40px;
+}
+
+#banner .carousel-item button {
+    width: 130px;
+    height: 40px;
+    margin-top:30px;
+    margin-bottom:40px;
+    background: rgb(46, 110, 229);
+    border:none;
+    outline:none;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition:0.4s;
+}
+
+#banner .carousel-item button:hover {
+    background:orange;
+}
+/* Add your custom CSS styles here */
+
+.museum-card {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.imgbaotang img {
+
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+/* form */
+body {
+    background-color: #f0f0f0;
+}
+
+.museum-card {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.imgbaotang img {
+
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.frm{
+    display: flex;
+    justify-content: center;
+}
+
+.div-with-margin{
+    margin-right: 20px;
+}
+.div-with-margin2{
+    margin-left: 30px;
+}
+
+
+
+.booking-form {
+    max-width: 1000px;
+    max-height: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #f6dd55;
+    margin-bottom: 30px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="date"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="number"],
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f6dd55;
+    border-radius: 3px;
+}
+
+.booking-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.booking-form button[type="submit"] {
+    background-color: green;
+    color: white;
+}

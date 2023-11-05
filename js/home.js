@@ -59,11 +59,42 @@ const product2 = [{
   name: 'Ho Chi Minh Museum',
   imgSrc: '../image/9.jpg',
   price: '200.000',
-  location: '19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội<br>',
+
+  location: '19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,<br>',
   categoryType: 2,
 }]
 
+fetch('http://localhost:3000/product1').then(response => response.json())
+.then(data => {
+  console.log(data); // This print the data from data.json
+})
+.catch(function(error) {
+    console.log(error);
+    // Xử lý lỗi nếu có
+    alert('An error occurred while registering the user.');
+  });
 
+function checkAPI(){
+  fetch('http://localhost:3000/product1/1',{method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: 'Ho Chi Minh Museum',
+    imgSrc: '../image/9.jpg',
+    price: '200.000',
+    location: '19 Ngọc Hà, Đội Cấn, Ba Đình, Hà Nội,<br>',
+    categoryType: 2,
+  })} )
+.then(data => {
+  console.log(data); // This will print the data from data.json
+})
+.catch(function(error) {
+    console.log(error);
+    // Xử lý lỗi nếu có
+    alert('An error occurred while registering the user.');
+  });
+}
 const getProductByCategory = (categoryType = 1) => {
   const filteredProds =product1.filter((prod)=>prod.categoryType === categoryType)
   let elementCategory = document.getElementById(`category_${categoryType}`);
@@ -77,7 +108,7 @@ for(let i=0; i<filteredProds.length; i++){
             <p class="card-text">${filteredProds[i].desc}</p>
             <br>
             <div class="text-end">
-              <a href="#" class="btn btn-primary">Booking </a>
+              <a href="../html/index.html?id=${filteredProds[i].id}" class="btn btn-primary">Booking </a>
             </div>
           </div>
         </div>
@@ -103,7 +134,7 @@ for(let i=0; i<filteredProds.length; i++){
             <i class="fa-solid fa-dollar-sign" style="color: #FFC300;"></i> ${filteredProds[i].price}
             <div class="text-end">
               <br>
-              <a href="#" class="btn btn-primary">Booking </a>
+              <a href="../html/index.html?id=${filteredProds[i].id}" class="btn btn-primary">Booking </a>
             </div>
           </div>
         </div>

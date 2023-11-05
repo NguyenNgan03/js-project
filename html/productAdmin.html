@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin User</title>
+    <link rel="stylesheet" href="../css/productAdmin.css">
+    <link rel="stylesheet" href="../css/dashBoard.css">
+    <link rel="stylesheet" href="../css/addUser.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script
+      src="https://kit.fontawesome.com/e1aaf64c7e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="Admin_product">
+      <!-- Thanh menu -->
+      <input type="checkbox" id="menu-toggle">
+        <div class="sidebar">
+          <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(../image/1.jpeg)"></div>
+                <h3>David Green</h3>
+                <small>Art Director</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                      <a href="../html/dashBoard.html">
+                        <span class="fa-solid fa-house" style="color:white;"></span>
+                            <small>Home</small>
+                        </a>
+                    </li>
+                    
+                    <li>
+                      <a href="../html/productAdmin.html" class="active">
+                            <span class="fa-solid fa-layer-group" style="color:white;"></span>
+                            <small>Products</small>
+                        </a>
+                    </li>
+                    <li>
+                      <a href="../html/addUser.html">
+                            <span class="fa fa-graduation-cap" style="color:white;"></span>
+                            <small>User</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span class="fa fa-power-off"></span>
+                            <small>Logout</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <header>
+          <div class="header-content">
+            <label for="menu-toggle">
+              <span class="fa-solid fa-bars"></span>
+            </label>
+              
+            <div class="header-menu">
+              <label for="">
+                <span class="fa-solid fa-search"></span>
+              </label>
+              
+              <div class="notify-icon">
+                <span class="fa-solid fa-bell"></span>
+                <span class="notify">3</span>
+              </div>
+              
+              <div class="user">
+                <div class="bg-img" style="background-image: url(../image/1.jpeg)"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </input>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <table class="table" id="productTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th colspan="6"><button class="add-user-btn" onclick="showAddProductForm()">Add Product</button></th>
+            </tr>
+            <tr>
+                <th>Name Product</th>
+                <th>Quantity </th>
+                <th> Price</th>
+                <th> Discount</th>
+                <th> Location </th>
+                <th colspan="6">Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"> </tbody>
+      </table>
+    </div>
+
+
+    <div id="addProductForm" style="display: none;">
+      <h2>Add Product</h2>
+      <form id="productForm" onsubmit="addProduct(event)">
+        <input type="text" id="productNameInput" placeholder="Product Name" required>
+        <input type="text" id="quantityInput" placeholder=" Quantity " required>
+        <input type="text" id="priceInput" placeholder="Price " required>
+        <input type="text" id="discountInput" placeholder="Discount " required>
+        <input type="text" id="locationInput" placeholder="Location " required>
+        
+        <input id="idInput" type="hidden" value="">
+        <button type="submit">Save</button>
+        <button type="button" onclick="hideAddProductForm()">Cancel</button>
+      </form>
+    </div>
+  <!-- </div> -->
+  <script src="../json_server/db.json"></script>
+  <script src="../js/productAdmin.js"> </script>
+  </body>
+</html>

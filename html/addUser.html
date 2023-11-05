@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/dashBoard.css">
+  <link rel="stylesheet" href="../css/addUser.css">
+  <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- !-- Navbar -- -->
+    <div class="sidebar">
+      <div class="side-content">
+          <div class="profile">
+              <div class="profile-img bg-img" style="background-image: url(../image/1.jpeg)"></div>
+              <h3>David Green</h3>
+              <small>Art Director</small>
+          </div>
+          <div class="side-menu">
+              <ul>
+                  <li>
+                    <a href="../html/dashBoard.html" >
+                      <span class="fa-solid fa-house" style="color:white;"></span>
+                          <small>Home</small>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="../html/productAdmin.html">
+                          <span class="fa-solid fa-layer-group" style="color:white;"></span>
+                          <small>Products</small>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="../html/addUser.html" class="active">
+                          <span class="fa fa-graduation-cap" style="color:white;"></span>
+                          <small>User</small>
+                      </a>
+                  </li>
+                  <br>
+                  <li>
+                      <a href="../html/logout.html">
+                          <span class="fa fa-power-off"></span>
+                          <small>Logout</small>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- -- -----Data------- -- -->
+  <div class="content">
+      <table class="table" id="userTable">
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="fa-solid fa-bars"></span>
+                </label>
+                <div class="header-menu">
+                    <label for="">
+                        <span class="fa-solid fa-search"></span>
+                    </label>
+                    <div class="notify-icon">
+                        <span class="fa-solid fa-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(../image/1.jpeg)"></div>
+                    </div>
+                </div>
+            </div>
+            <tr>
+                <th>User</th>
+                <th colspan="5"><button class="add-user-btn" onclick="showAddUserForm()">Add User</button></th>
+            </tr>
+            <tr>
+                <td>Id</td>
+                <td>User Name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Phone</td>
+                <td>Action</td>
+            </tr>
+        </header>
+        <tbody id="tbody">
+                  
+        </tbody>
+    </table>
+    <div id="addUserForm" style="display: none;">
+      <h2>Add User</h2>
+      <form id="userForm" onsubmit="addUser(event)">
+        <input type="text" id="userNameInput" placeholder="User Name" required>
+        <input type="email" id="emailInput" placeholder="Email" required>
+        <input type="password" id="passwordInput" placeholder="Password" required>
+        <input type="tel" id="phoneInput" placeholder="Phone" required>
+        <input id="idInput" type="hidden" value="">
+        <button type="submit">Save</button>
+        <button type="button" onclick="hideAddUserForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+    <script src="../json_server/db.json"></script>
+      <script src="../js/user.js"></script>
+</body>
+</html>
