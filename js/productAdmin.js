@@ -124,7 +124,6 @@ function editProduct(id) {
 
       productNameInput.value = product1.productName;
       quantityInput.value = product1.quantity;
-      
       priceInput.value = product1.price;
       discountInput.value = product1.discount;
       locationInput.value = product1.location;
