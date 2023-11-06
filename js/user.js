@@ -31,6 +31,7 @@ function displayUsers() {
 }
 
 function showAddUserForm() {
+  var roleInput = document.getElementById('roleInput');
   addUserForm.style.display = "block";
 }
 
@@ -55,12 +56,14 @@ function addUser(event) {
   const passwordInput = document.getElementById("passwordInput");
   const phoneInput = document.getElementById("phoneInput");
   const idInput = document.getElementById("idInput");
+  
 
   const newUser = {
     username: userNameInput.value,
     email: emailInput.value,
     password: passwordInput.value,
     phone: phoneInput.value,
+   
   };
 
   if (idInput.value) {

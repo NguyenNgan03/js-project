@@ -1,10 +1,11 @@
 {
   "user": [
     {
-      "username": "Thu",
-      "email": "thu@gmail.com",
-      "password": "0000",
+      "username": "Huyen",
+      "email": "huyenn@gmail.com",
+      "password": "1234",
       "phone": "123456789",
+      "role": "admin",
       "id": 14
     },
     {
@@ -24,8 +25,8 @@
     {
       "username": "Loan",
       "email": "loan@gmail.com",
-      "phone": "0912345670",
       "password": "1234",
+      "phone": "0912345670",
       "id": 17
     },
     {
@@ -36,6 +37,7 @@
       "id": 18
     },
     {
+
       "username": "Nhi ",
       "email": "nhikhanh058@gmail.com",
       "password": "nhi123",

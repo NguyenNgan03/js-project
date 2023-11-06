@@ -43,7 +43,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
   // Gọi hàm xác thực người dùng từ json_server
   authenticateUser(user);
-  
+
   // Reset form đăng nhập
   document.getElementById('loginForm').reset();
 });
@@ -62,15 +62,21 @@ function authenticateUser(user) {
       if (foundUser) {
         // Lưu thông tin đăng nhập vào Local Storage
         localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
-      
-        alert('Login successful!'); // Thông báo thành công
-        window.location.href = '../html/home.html';
+
+        // Kiểm tra vai trò của người dùng
+        if (foundUser.role === 'admin') {
+          // Nếu là admin, chuyển hướng đến trang admin.html
+          window.location.href = '../html/dashBoard.html';
+        } else {
+          // Nếu không phải admin, chuyển hướng đến trang home.html
+          window.location.href = '../html/home.html';
+        }
       } else {
         // Hiển thị thông báo lỗi
         alert('Invalid username or password. Try again or create an account');
       }
     })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+    // .catch(error => {
+    //   console.error('Error:', error);
+    // });
 }

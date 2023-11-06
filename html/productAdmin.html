@@ -27,7 +27,6 @@
                 <h3>David Green</h3>
                 <small>Art Director</small>
             </div>
-
             <div class="side-menu">
                 <ul>
                     <li>
@@ -96,9 +95,11 @@
 
             </tr>
             <tr>
-                <th> ID </th>
-                <th> Name Product</th>
-                <th> Quantity </th>
+
+                <th>ID</th>
+                <th>Name Product</th>
+                <th>Quantity </th>
+
                 <th> Price</th>
                 <th> Discount</th>
                 <th> Location </th>
@@ -114,11 +115,10 @@
       <h2>Add Product</h2>
       <form id="productForm" onsubmit="addProduct(event)">
         <input type="text" id="productNameInput" placeholder="Product Name" required>
-        <input type="text" id="quantityInput" placeholder=" Quantity " required>
-        <input type="text" id="priceInput" placeholder="Price " required>
-        <input type="text" id="discountInput" placeholder="Discount " required>
-        <input type="text" id="locationInput" placeholder="Location " required>
-        
+        <input type="text" id="quantityInput" placeholder="Quantity" required>
+        <input type="text" id="priceInput" placeholder="Price" required>
+        <input type="text" id="discountInput" placeholder="Discount" required>
+        <input type="text" id="locationInput" placeholder="Location" required>
         <input id="idInput" type="hidden" value="">
         <button type="submit">Save</button>
         <button type="button" onclick="hideAddProductForm()">Cancel</button>
