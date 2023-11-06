@@ -1,14 +1,7 @@
 {
   "user": [
     {
-      "username": "Huye",
-      "email": "huyen@gmail.com",
-      "password": "098",
-      "phone": "234567891",
-      "id": 13
-    },
-    {
-      "username": "Th",
+      "username": "Thu",
       "email": "thu@gmail.com",
       "password": "0000",
       "phone": "123456789",
@@ -22,24 +15,24 @@
       "id": 15
     },
     {
-      "username": "hoai ",
-      "email": "hoai@gmail.com",
-      "phone": "098765",
-      "password": "12345",
+      "username": "Hue",
+      "email": "hue@gmail.com",
+      "phone": "0987654321",
+      "password": "0987",
       "id": 16
     },
     {
-      "username": "Nguyen Hoai",
-      "email": "eunwoo565@gmail.com",
-      "phone": "0945824007",
-      "password": "Hoai1234",
+      "username": "Loan",
+      "email": "loan@gmail.com",
+      "phone": "0912345670",
+      "password": "1234",
       "id": 17
     },
     {
-      "username": "ng",
-      "email": "hoai.nguyen25@student.passerellesnumeriques.org",
-      "phone": "09",
-      "password": "12345",
+      "username": "Tuyen",
+      "email": "tuyen@gmail.com",
+      "phone": "0987654321",
+      "password": "0987",
       "id": 18
     },
     {
@@ -68,6 +61,7 @@
       "img3": "https://lh4.ggpht.com/-cQ_ILch9Uv0/VhkSWGDjJDI/AAAAAAAAAfM/GD9FYF_6zis/s1600/Vietnam%2Bwar%2B%25281%2529.jpg",
       "img4": "https://previews.123rf.com/images/mediavn/mediavn1610/mediavn161000467/64740276-hanoi-vietnam-oct-11-2014-old-french-navy-cannon-being-demonstrated-at-a-historic-military-museum-in.jpg",
       "img5":"https://vietnamtravel.com/images/2020/07/Vietnam-Military-History-Museum-13.jpg"
+
 
     },
        
@@ -234,4 +228,3 @@
     }
   ]
   
-}
