@@ -27,7 +27,7 @@ function displayProducts() {
       });
     })
     .catch(error => {
-      console.error("Lỗi khi lấy danh sách người dùng:", error);
+      console.error("Lỗi khi lấy danh sách sản phẩm:", error);
     });
 }
 
@@ -105,21 +105,25 @@ function addProduct(event) {
         displayProducts();
       })
       .catch(error => {
-        console.error("Lỗi khi thêm người dùng:", error);
+        console.error("Lỗi khi thêm sản phẩm:", error);
       });
   }
 }
 
 function editProduct(id) {
+  console.log("test");
   const url = `${apiUrl}/${id}`;
   fetch(url)
     .then(response => response.json())
     .then(product1 => {
+      console.log("product1", product1);
       const productNameInput = document.getElementById("productNameInput");
       const quantityInput = document.getElementById("quantityInput");
       const priceInput = document.getElementById("priceInput");
       const discountInput = document.getElementById("discountInput");
+
       const locationInput = document.getElementById("locationInput");
+
       const idInput = document.getElementById("idInput");
 
       productNameInput.value = product1.productName;
