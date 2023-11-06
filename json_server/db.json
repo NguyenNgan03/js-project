@@ -1,10 +1,11 @@
 {
   "user": [
     {
-      "username": "Thu",
-      "email": "thu@gmail.com",
-      "password": "0000",
+      "username": "Huyen",
+      "email": "huyenn@gmail.com",
+      "password": "1234",
       "phone": "123456789",
+      "role": "admin",
       "id": 14
     },
     {
@@ -24,8 +25,8 @@
     {
       "username": "Loan",
       "email": "loan@gmail.com",
-      "phone": "0912345670",
       "password": "1234",
+      "phone": "0912345670",
       "id": 17
     },
     {
@@ -50,382 +51,120 @@
       "id": 23
     },
     {
-      "username": "Huyen",
-      "email": "huyen@gmail.com",
-      "phone": "234567891",
-      "password": "1234",
+      "username": "Giang",
+      "email": "giang@gmail.com",
+      "phone": "0987654321",
+      "password": "098",
       "id": 24
-    },
-    {
-      "username": "Lien",
-      "email": "lien@gmail.com",
-      "phone": "0987654321",
-      "password": "000",
-      "id": 25
-    },
-    {
-      "username": "Nhan",
-      "email": "nhan@gmail.com",
-      "phone": "0912345670",
-      "password": "123",
-      "id": 26
-    },
-    {
-      "username": "Man",
-      "email": "man@gmail.com",
-      "phone": "0987654321",
-      "password": "000",
-      "id": 27
-    },
-    {
-      "username": "Huyen",
-      "email": "nhi@gmail.com",
-      "phone": "0987654321",
-      "password": "fgt",
-      "id": 28
-    },
-    {
-      "username": "Huyen",
-      "email": "nhhi@gmail.com",
-      "phone": "0987654321",
-      "password": "jjj",
-      "id": 29
-    },
-    {
-      "username": "Thư",
-      "email": "nhid@gmail.com",
-      "phone": "0987654321",
-      "password": "fff",
-      "id": 30
-    },
-    {
-      "username": "Huyen",
-      "email": "nhai@gmail.com",
-      "phone": "0987654321",
-      "password": "ggg",
-      "id": 31
-    },
-    {
-      "username": "Huyen",
-      "email": "nhgi@gmail.com",
-      "phone": "0987654321",
-      "password": "ggg",
-      "id": 32
-    },
-    {
-      "username": "Huyen",
-      "email": "nhiq@gmail.com",
-      "phone": "0987654321",
-      "password": "qqq",
-      "id": 33
-    },
-    {
-      "username": "Huyen",
-      "email": "hufyen@gmail.com",
-      "phone": "234567891",
-      "password": "fff",
-      "id": 34
-    },
-    {
-      "username": "Huyen",
-      "email": "nhgggi@gmail.com",
-      "phone": "0987654321",
-      "password": "ggg",
-      "id": 35
-    },
-    {
-      "username": "Huyen",
-      "email": "nffhi@gmail.com",
-      "phone": "0987654321",
-      "password": "fff",
-      "id": 36
-    },
-    {
-      "username": "Huyen",
-      "email": "huyden@gmail.com",
-      "phone": "234567891",
-      "password": "ddd",
-      "id": 37
-    },
-    {
-      "username": "Huyen",
-      "email": "hduyen@gmail.com",
-      "phone": "234567891",
-      "password": "aaa",
-      "id": 38
-    },
-    {
-      "username": "Thư",
-      "email": "huyaean@gmail.com",
-      "phone": "234567891",
-      "password": "hhh",
-      "id": 39
-    },
-    {
-      "username": "Thư",
-      "email": "haaauyen@gmail.com",
-      "phone": "234567891",
-      "password": "aaa",
-      "id": 40
-    },
-    {
-      "username": "Thư",
-      "email": "nhfi@gmail.com",
-      "phone": "0987654321",
-      "password": "fff",
-      "id": 41
-    },
-    {
-      "username": "Thư",
-      "email": "nhdddi@gmail.com",
-      "phone": "0987654321",
-      "password": "ddd",
-      "id": 42
-    },
-    {
-      "username": "Thư",
-      "email": "huayen@gmail.com",
-      "phone": "234567891",
-      "password": "aaa",
-      "id": 43
-    },
-    {
-      "username": "Hoanh",
-      "email": "huyaaaen@gmail.com",
-      "phone": "234567891",
-      "password": "ddd",
-      "id": 44
-    },
-    {
-      "username": "Huyen",
-      "email": "hsssuyen@gmail.com",
-      "phone": "234567891",
-      "password": "ssss",
-      "id": 45
-    },
-    {
-      "username": "Huyen",
-      "email": "dh@gmail.com",
-      "phone": "0912345670",
-      "password": "ddd",
-      "id": 46
-    },
-    {
-      "username": "Hoanh",
-      "email": "huyenfdfd@gmail.com",
-      "phone": "234567891",
-      "password": "ff",
-      "id": 47
-    },
-    {
-      "username": "homaihuyen",
-      "email": "Huyen.Homai25@student.passerellesnumeriques.org",
-      "phone": "543543534",
-      "password": "fff",
-      "id": 48
-    },
-    {
-      "username": "homaihuyen",
-      "email": "Huyen.Hdomai25@student.passerellesnumeriques.org",
-      "phone": "4444443443",
-      "password": "ddd",
-      "id": 49
-    },
-    {
-      "username": "homaihuyen",
-      "email": "Huyedn.Homai25@student.passerellesnumeriques.org",
-      "phone": "4444443443",
-      "password": "aaa",
-      "id": 50
-    },
-    {
-      "username": "homaihuyen",
-      "email": "huydenhomai@gmail.com",
-      "phone": "4444443443",
-      "password": "fff",
-      "id": 51
-    },
-    {
-      "username": "Thao",
-      "email": "thao@gmail.com",
-      "phone": "0987654321",
-      "password": "098",
-      "id": 52
-    },
-    {
-      "username": "Suong",
-      "email": "suong@gmail.com",
-      "phone": "0987654321",
-      "password": "0987",
-      "id": 53
-    },
-    {
-      "username": "Huyen",
-      "email": "hhuyen@gmail.com",
-      "phone": "0332594284",
-      "password": "0987",
-      "id": 54
-    },
-    {
-      "username": "Huyen",
-      "email": "han@gmail.com",
-      "phone": "0332594284",
-      "password": "0987",
-      "id": 55
-    },
-    {
-      "username": "Huyen",
-      "email": "nhmni@gmail.com",
-      "phone": "0987654321",
-      "password": "098",
-      "id": 56
-    },
-    {
-      "username": "Hoang",
-      "email": "mmnnchi@gmail.com",
-      "phone": "0987654321",
-      "password": "ccc",
-      "id": 57
-    },
-    {
-      "username": "Hoang",
-      "email": "mmnbnchi@gmail.com",
-      "phone": "0987654321",
-      "password": "aaa",
-      "id": 58
-    },
-    {
-      "username": "Huyen",
-      "email": "nnnhi@gmail.com",
-      "phone": "0987654321",
-      "password": "123",
-      "id": 59
-    },
-    {
-      "username": "Huyen",
-      "email": "hoavnhho@gmail.com",
-      "phone": "0332594284",
-      "password": "123",
-      "id": 60
-    },
-    {
-      "username": "Hoanh",
-      "email": "hnmn@gmail.com",
-      "phone": "0912345670",
-      "password": "123",
-      "id": 61
-    },
-    {
-      "username": "Hoanh",
-      "email": "hoammmbnhho@gmail.com",
-      "phone": "0332594284",
-      "password": "123",
-      "id": 62
-    },
-    {
-      "username": "Huyen",
-      "email": "nbahi@gmail.com",
-      "phone": "0987654321",
-      "password": "123",
-      "id": 63
     }
   ],
   "product1": [
-      {
-        "id": "1",
-        "name": "Museum of cham sculptur",
-        "imgSrc": "../image/1.jpg",
-        "price": "100.000",
-        "location": "2 Tháng 9, Hải Châu, Đà Nẵng",
-        "categoryType": 2
-      },
-      {
-        "id": "2",
-        "name": "Museum of military zone 5",
-        "imgSrc": "../image/2.jpg",
-        "price": "300.000",
-        "location": "Duy Tân, Hải Châu, Đà Nẵng ",
-        "categoryType": 2
-      },
-      {
-        "id": "3",
-        "name": "Da Nang fine arts museum",
-        "imgSrc": "../image/3.jpg",
-        "price": "220.000",
-        "location": "8 Đ. Lê Duẩn, Hải Châu, Đà Nẵng ",
-        "categoryType": 2
-      },
-      {
-        "id": "4",
-        "name": "Da Nang Museum",
-        "imgSrc": "../image/4.jpg",
-        "price": "200.000",
-        "location": "19 Ngọc Hà, Ba Đình, Hà Nội",
-        "categoryType": 2
-      },
-      {
-        "id": "5",
-        "name": "War Remnants Museum",
-        "imgSrc": "../image/6.jpg",
-        "price": "150.000",
-        "location": "28 Đ. Võ Văn Tần, TP.Hồ Chí Minh",
-        "categoryType": 2
-      },
-      {
-        "id": "6",
-        "name": "Vietnam Museum of History",
-        "imgSrc": "../image/7.jpg",
-        "price": "200.000",
-        "location": "216 Đ. Trần Quang Khải, Hà Nội",
-        "categoryType": 2
-      },
-      {
-        "id": "7",
-        "name": "Thanh Ha Terracotta Park",
-        "imgSrc": "../image/8.jpg",
-        "price": "150.000",
-        "location": "Phạm Phán Hội An, Quảng Nam",
-        "categoryType": 2
-      },
-      {
-        "id": "8",
-        "name": "Ho Chi Minh Museum",
-        "imgSrc": "../image/9.jpg",
-        "price": "120.000",
-        "location": "19 Ngọc Hà,Ba Đình, Hà Nội",
-        "categoryType": 2
-      },
-      {
-        "id": "9",
-        "name": "War Remnants Museum",
-        "imgSrc": "../image/9.jpg",
-        "price": "150.000",
-        "location": "28 Đ. Võ Văn Tần, TP.Hồ Chí Minh",
-        "categoryType": 2
-      },
-      {
-        "id": "10",
-        "name": "Vietnam Museum of History",
-        "imgSrc": "../image/10.jpg",
-        "price": "100.000",
-        "location": "216 Đ. Trần Quang Khải,Hà Nội",
-        "categoryType": 2
-      },
-      {
-        "id": "11",
-        "name": "Thanh Ha Terracotta Park",
-        "imgSrc": "../image/5.jpg",
-        "price": "120.000",
-        "location": "Phạm Phán Hội An, Quảng Nam",
-        "categoryType": 2
-      },
-      {
-        "id": "12",
-        "name": "Ho Chi Minh Museum",
-        "imgSrc": "../image/13.jpg",
-        "price": "200.000",
-        "location": "19 Ngọc Hà,Ba Đình, Hà Nội",
-        "categoryType": 2
-      }
-    ]
+    {
+      "id": "1",
+      "name": "Museum of cham sculptur",
+      "quantity": "5",
+      "imgSrc": "../image/1.jpg",
+      "price": "100.000",
+      "discount": "12%",
+      "location": "2 Tháng 9, Hải Châu, Đà Nẵng",
+      "categoryType": 2
+    },
+    {
+      "id": "2",
+      "name": "Museum of military zone 5",
+      "quantity": "10",
+      "imgSrc": "../image/2.jpg",
+      "price": "300.000",
+      "discount": "12%",
+      "location": "Duy Tân, Hải Châu, Đà Nẵng ",
+      "categoryType": 2
+    },
+    {
+      "id": "3",
+      "name": "Da Nang fine arts museum",
+      "quantity": "50",
+      "imgSrc": "../image/3.jpg",
+      "price": "220.000",
+      "discount": "5%",
+      "location": "8 Đ. Lê Duẩn, Hải Châu, Đà Nẵng ",
+      "categoryType": 2
+    },
+    {
+      "id": "4",
+      "name": "Da Nang Museum",
+      "quantity": "23",
+      "imgSrc": "../image/4.jpg",
+      "price": "200.000",
+      "discount": "20%",
+      "location": "19 Ngọc Hà, Ba Đình, Hà Nội",
+      "categoryType": 2
+    },
+    {
+      "id": "6",
+      "name": "Vietnam Museum of History",
+      "quantity": "23",
+      "imgSrc": "../image/7.jpg",
+      "price": "200.000",
+      "discount": "12%",
+      "location": "216 Đ. Trần Quang Khải, Hà Nội",
+      "categoryType": 2
+    },
+    {
+      "id": "7",
+      "name": "Ho Chi Minh Museum",
+      "quantity": "20",
+      "price": "150.000",
+      "discount": "15%",
+      "location": "Phạm Phán Hội An, Quảng Nam",
+      "categoryType": 2
+    },
+    {
+      "id": "8",
+      "name": "Ho Chi Minh Museum",
+      "quantity": "33",
+      "imgSrc": "../image/9.jpg",
+      "price": "120.000",
+      "discount": "12%",
+      "location": "19 Ngọc Hà,Ba Đình, Hà Nội",
+      "categoryType": 2
+    },
+    {
+      "id": "9",
+      "name": "War Remnants Museum",
+      "quantity": "30",
+      "imgSrc": "../image/9.jpg",
+      "price": "150.000",
+      "discount": "10%",
+      "location": "28 Đ. Võ Văn Tần, TP.Hồ Chí Minh",
+      "categoryType": 2
+    },
+    {
+      "id": "10",
+      "name": "Vietnam Museum of History",
+      "quantity": "20",
+      "imgSrc": "../image/10.jpg",
+      "price": "100.000",
+      "discount": "10%",
+      "location": "216 Đ. Trần Quang Khải,Hà Nội",
+      "categoryType": 2
+    },
+    {
+      "id": "11",
+      "name": "Thanh Ha Terracotta Park",
+      "quantity": "23",
+      "imgSrc": "../image/5.jpg",
+      "price": "120.000",
+      "discount": "15%",
+      "location": "Phạm Phán Hội An, Quảng Nam",
+      "categoryType": 2
+    },
+    {
+      "productName": "123",
+      "quantity": "HCM",
+      "price": "200.000",
+      "discount": "20%",
+      "location": "Đà Nẵng",
+      "id": "4gSWx5r"
+    }
+  ]
 }

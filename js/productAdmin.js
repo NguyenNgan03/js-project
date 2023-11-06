@@ -14,11 +14,11 @@ function displayProducts() {
         const row = productTable.insertRow();
         row.innerHTML = `
           <td>${product1.id}</td>
-          <td>${product1.productName}</td>
+          <td>${product1.name}</td>
           <td>${product1.quantity}</td>
           <td>${product1.price}</td>
-          <td>${product1. discount}</td>
-          <td>${product1. location}</td>
+          <td>${product1.discount}</td>
+          <td>${product1.location}</td>
           <td>
               <button onclick="editProduct(${product1.id})">Edit</button>
               <button onclick="deleteProduct(${product1.id})">Delete</button>
@@ -119,7 +119,7 @@ function editProduct(id) {
       const quantityInput = document.getElementById("quantityInput");
       const priceInput = document.getElementById("priceInput");
       const discountInput = document.getElementById("discountInput");
-      const locationInput = document.getElementById("locationInput ");
+      const locationInput = document.getElementById("locationInput");
       const idInput = document.getElementById("idInput");
 
       productNameInput.value = product1.productName;
