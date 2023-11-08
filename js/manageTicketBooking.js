@@ -105,6 +105,7 @@ function createTicketInfo(){
     `<h3> Xin chào ${customerName} </h3>
     <h4> Bạn đã đặt ${quantity} vé đi ${museumName} </h4>
     <h4> Tổng thanh toán là ${total()} VNĐ</h4>
+    <h4>Thanh toán qua số tài khoản </h4>
     <button style="background-color: #f6dd55; color: black " type="submit" onclick="sendMail()">Xác nhận</button>
 
     `;
@@ -144,7 +145,9 @@ function sendMail(){
 
 // }
 
-
+function ticketproduct(){
+    
+}
     
 
 
