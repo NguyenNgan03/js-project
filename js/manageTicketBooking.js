@@ -1,4 +1,48 @@
-// import { getDataFromLocalStore, setDataToLocalStor, addObjDataToLocalStore } from './localStorage.js';
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+
+function displayProductById(productId) {
+    fetch('http://localhost:3000/museum')
+        .then(res => res.json())
+        .then(data => {
+            console.log('product', data);
+            let productContainer = ``;
+            const product = data.find(item => item.id === parseInt(productId));
+            if (product) {
+                productContainer += `
+                <h2 style="text-align: center;">Đặt vé</h2>
+                <hr style="border-color: #f6dd55;">
+    
+                <div class=" museum-card ">
+                    <div class="imgbaotang">
+                        <img src="${product.img1}" alt="${product.img1}">
+                    </div>
+                    <div class="thongtinbaotang">
+                        <h3 id="msu-name">${product.name}</h3>
+                        <p>${product.location}</p>
+                        <div style="display: flex;">
+                            <p id="price"> ${product.price}   </p>
+                            <label for=""> VND </label>
+                        </div>
+                        <p>Đánh giá: ${product.asess}</p>
+                    </div>
+                </div>
+            `;
+            } else {
+                // Không tìm thấy sản phẩm
+                console.log("Không tìm thấy sản phẩm với ID " + productId);
+            }
+
+            // Chèn biến productContainer vào DOM
+            document.getElementById('detail').innerHTML = productContainer;
+        })
+        .catch(error => console.error("Lỗi trong quá trình tải dữ liệu: " + error));
+}
+
+displayProductById(productId);
+
+
+
 function total(){
     var totalTicket = document.getElementById("quantity-ticket").value;
     var priceTicket = document.getElementById("price").textContent;
@@ -6,8 +50,6 @@ function total(){
     return totalPriceElement;
 }
 let message;
-
-// let ticketList = getDataFromLocalStore("ticketList", []);
 let ticketList = load() || [];
 function load(){
     return JSON.parse(localStorage.getItem("ticketList"));
@@ -123,28 +165,6 @@ function sendMail(){
     Save()
     
 }
-
-// function deleteTicket() {
-//     ticketList.length = 0;
-//     // console.log(ticketList);
-//     Save();
-// }
-// function deleteTicket(id){
-//     for(let i =0; i<ticketList.length; i++){
-//         if(ticketList[i].ID == id){
-//             ticketList.splice(i,1);
-//             Save();
-
-//             return;
-//         }
-//     }
-
-// }
-
-// function editTicket(id) {
-
-// }
-
 function ticketproduct(){
     
 }
