@@ -10,20 +10,20 @@ function displayProductById(productId){
         if(product){
            productContainer += `
 
-           <div class = "card-wrapper">
+           <div id = "contain">
             <div class = "card">
             <!-- card left -->
-            <div class = "product-imgs">
+            <div class = "" id="change2">
                 <div class = "img-display">
-                    <h1>${product.name}</h1>
-                    <div class = "img-showcase">
-                        <img src = "${product.img1}" alt = "shoe image">
-                        <img src = "${product.img2}" alt = "shoe image">
-                        <img src = "${product.img3}" alt = "shoe image">
-                        <img src = "${product.img4}" alt = "shoe image">
+                    <h1 id="title1">${product.name}</h1>
+                    <div class = "img-showcase second_img_box">
+                        <img src = "${product.img1}" alt = "shoe image" class="second_img">
+                        <img src = "${product.img2}" alt = "shoe image" class="second_img">
+                        <img src = "${product.img3}" alt = "shoe image" class="second_img">
+                        <img src = "${product.img4}" alt = "shoe image" class="second_img">
                     </div>
                 </div>
-                <div class = "img-select">
+                <div class = "img-select" id="change3">
                     <div class = "img-item">
                         <a href = "#" data-id = "1">
                         <img src = "${product.img1}" alt = "shoe image">
@@ -47,18 +47,18 @@ function displayProductById(productId){
                 </div>
             </div>
             <!-- card right -->
-            <div class = "product-content">
-                <a href = "#" class = "product-title">${product.firstDescribe}</a>
+            <div class = "product-content" id="change4">
+                <a href = "#" id="product_title" class = "product-title">${product.firstDescribe}</a>
                 <div class = "product-price">
                     <p class="new-price"> Price: <span>${product.price}</span></p>
-                    <p><i class="fa fa-clock"></i>Tình trạng: <span>Đang mở cửa</span></p>
+                    <p><i style = "color:#FFC300" class="fa fa-clock"></i>Tình trạng: <span>Đang mở cửa</span></p>
                         <div class = "product-rating">
-                            <p><i class="fa fa fa-check-circle"></i> Đánh giá: 
-                                <i style="color: yellow;"> ${product.asess}</i>
+                            <p><i style = "color:#FFC300" class="fa fa fa-check-circle"></i> Đánh giá: 
+                                <i style="color: black;" > ${product.asess}</i>
                             </p>
                         </div>
-                    <p><i class="fa fa-map-marker-alt"></i> Địa chỉ: <span>123 Đường ABC, Thành phố XYZ</span></p>
-                    <p><i class="fa fa-phone"></i> Hotline: <span>${product.hotline}</span></p>
+                    <p><i style = "color:#FFC300" class="fa fa-map-marker-alt"></i> Địa chỉ: <span>123 Đường ABC, Thành phố XYZ</span></p>
+                    <p><i style = "color:#FFC300" class="fa fa-phone"></i> Hotline: <span>${product.hotline}</span></p>
                 </div>
                 <div>
                     <p class="title">Description</p>
@@ -66,11 +66,11 @@ function displayProductById(productId){
                 </div>
                 <div class="purchase-info">
                     <a href="../html/bookTicket.html">
-                        <button type = "button" class = "btn"> <a href="./bookTicket.html?id=${product.id}"> Booking </a> </button>
+                        <button type = "button" class = "btn"> <a href="./bookTicket.html?id=${product.id}" class = "booking"> Booking </a> </button>
                     </a>
                 </div>
             </div>
-
+            </div>
         </div>
     </div>
            `;

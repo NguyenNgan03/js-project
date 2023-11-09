@@ -128,6 +128,7 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
     .product-imgs{
         display: flex;
@@ -137,4 +138,40 @@ p {
     .product-content{
         padding-top: 0;
     }
+}
+.card{
+    border: 3px solid rgb(234, 212, 16) ;  
+    height: auto !important;
+    padding: 30px;
+    box-shadow: rgba(113, 116, 88, 0.24) 0px 3px 8px;
+    background-color: #f2e9e9;
+}
+#contain{
+     background-color: rgb(255, 255, 255);
+     padding: 100px;
+
+}
+#change2{
+    /* background-color: red !important; */
+    display: flex !important;
+
+    flex-direction: row-reverse !important;
+    gap: 30px;
+
+}
+#change3{
+     display: flex;
+     flex-direction: column !important;
+     justify-content: end;
+     gap: 30px;
+     /* background-color: red; */
+     padding-bottom: 50px;
+}
+
+#change3 .img-item{
+    height: 100px !important;
+}
+.booking{
+    text-decoration: none; 
+    color: #fff;
 }

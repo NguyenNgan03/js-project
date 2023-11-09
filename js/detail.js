@@ -1,4 +1,3 @@
-
 const fetchProductData = async () => {
   try {
     const response  = await fetch('http://localhost:3000/product1');
@@ -7,7 +6,6 @@ const fetchProductData = async () => {
       throw new Error('Error fetching product data');
     }
     const products = await response.json();
- 
      // Hiển thị danh sách sản phẩm
     const productList = document.querySelector('.product-list');
     products.forEach(product => {
