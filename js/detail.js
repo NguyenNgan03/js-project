@@ -1,43 +1,99 @@
-const fetchProductData = async () => {
-  try {
-    const response  = await fetch('http://localhost:3000/product1');
-    console.log("Product",response);
-    if (!response.ok) {
-      throw new Error('Error fetching product data');
-    }
-    const products = await response.json();
-     // Hiển thị danh sách sản phẩm
-    const productList = document.querySelector('.product-list');
-    products.forEach(product => {
-      const productItem = document.createElement('div');
-      productItem.classList.add('product-item');
-      productItem.innerHTML = `
-        <div class="col-sm-3">
-          <div class="card">
-            <img src="${product.imgSrc}" class="rounded-top-4">
+document.addEventListener("DOMContentLoaded", function () {
+  // Bạn cần thay đổi URL này để thực hiện yêu cầu tới API của bạn
+  const apiUrl = ' http://localhost:3000/museum';
+
+  // Lấy dữ liệu sản phẩm từ API
+  function fetchProducts() {
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        // Hiển thị sản phẩm ban đầu khi trang tải
+        displayProduct(data);
+      })
+      .catch((error) => {
+        console.error('Lỗi khi tải dữ liệu sản phẩm:', error);
+      });
+  }
+
+  // Hiển thị sản phẩm
+  function displayProduct(data) {
+    let product = ``;
+    let productCount = 0;
+
+    for (const item of data) {
+      if (productCount % 4 === 0) {
+        product += '<div class = "row">';
+      }
+
+      product += `
+      <div class="col-md-3">
+        <a href="./index.html?id=${item.id}" class="change">
+          <div class="card" style="width: 18rem;">
+            <img src="${item.img1}" class="card-img-top imagge1" alt="${item.name}">
             <div class="card-body">
-              <h5 class="card-title text-info">${product.name}</h5>
-              <i class="fa-solid fa-location-dot" style="color:#FFC300;"></i> ${product.location}
-              <br>
-              <i class="fa-solid fa-dollar-sign" style="color: #FFC300;"></i> ${product.price}
-              <div class="text-end">
-                <br>
-                <a href="../html/index.html?id=${product.id}" class="btn btn-primary">Booking</a>
-              </div>
+              <h5 class="card-title title">${item.name}</h5>
+              <p class="card-text description">${item.firstDescribe}</p>
+              <p class="card-text"> ${item.location}</p>
+              <p class="card-text"> ${item.price}</p>
+              <a href="./index.html?id=${item.id}" class="btn btn-primary booking">Booking</a>
             </div>
           </div>
-        </div>`;
+        </a>
+      </div>
+      `;
 
-      productItem.addEventListener('click', () => {
-        showProductDetail(product);
-      });
+      if (productCount % 4 === 3 || productCount === data.length - 1) {
+        product += '</div>';
+      }
 
-      productList.appendChild(productItem);
-    });
-  } catch (error) {
-    console.log('Error:', error);
+      
+
+      productCount++;
+    }
+
+    document.getElementById('product-list').innerHTML = product;
   }
-};
+  document.getElementById('searchButton').addEventListener('click', function () {
+    const keyword = document.getElementById('searchInput').value;
+    searchProducts(keyword);
+  });
+
+  // Tạo hàm tìm kiếm sản phẩm
+  function searchProducts(keyword) {
+    // Lấy dữ liệu sản phẩm
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        // Lọc sản phẩm theo từ khóa tìm kiếm
+        const filteredProducts = data.filter((product) => {
+          return (
+            product.name.toLowerCase().includes(keyword.toLowerCase()) ||
+            product.location.toLowerCase().includes(keyword.toLowerCase()) ||
+            product.firstDescribe.toLowerCase().includes(keyword.toLowerCase())
+          );
+        });
+        let display=``;
+        const imagePath = "../image/anhweb.jpg";
+        if (filteredProducts.length > 0) {
+          // Hiển thị kết quả tìm kiếm nếu tìm thấy sản phẩm
+          displayProduct(filteredProducts);
+        } else {
+          // Hiển thị thông báo nếu không tìm thấy sản phẩm
+          display += `<div class="display" >
+          <h2> Không tìm thấy sản phẩm phù hợp </h2>
+          <img src="${imagePath}" alt="No matching products image" />
+          </div>`;
+          document.getElementById('product-list').innerHTML = display;
+        }
+      })
+      .catch((error) => {
+        console.error('Lỗi khi tải dữ liệu sản phẩm:', error);
+      });
+    }
 
 
-fetchProductData();
+ 
+
+  // Gọi hàm để tải dữ liệu sản phẩm ban đầu
+  fetchProducts();
+});

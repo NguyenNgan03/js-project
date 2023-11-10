@@ -112,6 +112,17 @@ main{
 .product1{
     background-color:#edebe2;
 }
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .display img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của phần tử cha */
+  }
 
 
 /*--------------- footer-------------------- */
