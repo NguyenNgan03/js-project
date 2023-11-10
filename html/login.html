@@ -17,38 +17,46 @@
 </head>
 <body>
     <!-- -------------------------Nav------------------------ -->
-    <div id="header">
-        <div class="logo">
-            <img src="../image/Logo.png" style="width: 50px; height: 50px;"/>
-            <p> Book meseum tickets</p>
-        </div>
-        <div id="menu">
-            <div class="item">
-                <a href="">Home</a>
-            </div>
-            <div class="item">
-                <a href="">About Us</a>
-            </div>
-            <div class="item">
-                <a href="">Booking</a>
-            </div>
-            <div class="item">
-                <a href="">Detail</a>
-            </div>
-            <div class="item">
-                <a href="">Contact Us</a>
-            </div>
-        </div>
-        <div id="icon">
-            <div class="item">
-                <i class="fa-solid fa-circle-user fa-xl"></i>
-            </div>
-            <div class="item">
-                <i class="fa-solid fa-cart-shopping fa-xl"></i>
-            </div>
+    <div id="wrapper">
+            <div id="header">
+                <div onclick="checkAPI()" class="logo">
+                    <img src="../image/Logo.png" style="width: 50px; height: 50px;" />
+                    <p> Book meseum tickets</p>
+                </div>
+                <div id="menu">
+                    <div class="item">
+
+                        <a style="color: yellow;" href="../html/home.html">Home</a>
+                    </div>
     
+                    <div class="item">
+                        <a href="./detail.html">Detail</a>
+                    </div>
+                    <div class="item">
+                        <a href="./aboutUs.html"> About Us</a>
+                    </div>
+                </div>
+                
+                <div id="icon">
+                    <div class="item">
+                        <a href="../html/login.html"><i class="fa-solid fa-circle-user fa-xl"></i></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+                    </div>
+                    <div class="item">
+                        <a href="../html/logout.html" id="logout-icon"><i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+          
+ <!------------ Main ---------------->
+
+
+            <div class="product1 row "  id="product1">
+               
+            </div>
         </div>
-    </div>
 
     <!-- -------------------Form------------------------ -->
     <form class="form" id="loginForm" novalidate>
