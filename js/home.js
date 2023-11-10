@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <h5 class="card-title title">${item.name}</h5>
               <p class="card-text description">${item.firstDescribe}</p>
               <p class="card-text"> ${item.location}</p>
-              <p class="card-text"> ${item.price}</p>
+              <p class="card-text"> ${item.price} <span> VND </span></p>
               <a href="./index.html?id=${item.id}" class="btn btn-primary booking">Booking</a>
             </div>
           </div>
