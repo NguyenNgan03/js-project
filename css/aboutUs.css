@@ -30,11 +30,17 @@
 	font-size: 4rem;
 	text-align: center;
 }
+
 .boxs{
-	padding: 16px;
+	width: 320px;
+	padding: 15px;
 	background: #1b1229;
 	border-radius: 15px;
 	transition: all .38s ease;
+}
+.boxs img {
+	height: 330px;
+    width: 270px;
 }
 .boxs h3{
 	font-size: 23px;
