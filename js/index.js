@@ -71,6 +71,7 @@ function displayProductById(productId){
             </div>
             </div>
             </div>
+
            `;
         }else{
              // Không tìm thấy sản phẩm
