@@ -44,3 +44,20 @@ text-decoration: none;
 .btn-primary:hover {
 background-color: #0056b3;
 }
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .display img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của phần tử cha */
+  }
+ 
+  
+  
+  
+  
+  
