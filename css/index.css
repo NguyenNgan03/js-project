@@ -163,15 +163,26 @@ p {
      display: flex;
      flex-direction: column !important;
      justify-content: end;
-     gap: 30px;
+     gap: 34px;
      /* background-color: red; */
-     padding-bottom: 50px;
+     /* background-color: red; */
+     padding-bottom: 59px !important;
 }
 
 #change3 .img-item{
     height: 100px !important;
 }
+#product_title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 .booking{
     text-decoration: none; 
     color: #fff;
+}
+#title1{
+     font-size:35px !important;
 }

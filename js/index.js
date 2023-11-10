@@ -49,7 +49,7 @@ function displayProductById(productId){
             <div class = "product-content" id="change4">
                 <a href = "#" id="product_title" class = "product-title">${product.firstDescribe}</a>
                 <div class = "product-price">
-                    <p class="new-price"> Price: <span>${product.price}</span></p>
+                    <p class="new-price"> Price: <span>${product.price}</span> <span> VND </span></p>
                     <p><i style = "color:#FFC300" class="fa fa-clock"></i>Tình trạng: <span>Đang mở cửa</span></p>
                         <div class = "product-rating">
                             <p><i style = "color:#FFC300" class="fa fa fa-check-circle"></i> Đánh giá: 
